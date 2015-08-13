@@ -1,0 +1,16 @@
+/* 
+    Document   : site_setting
+    Created on : Nov 19, 2013, 5:28:32 PM
+    Author     : Hoang Manh Tien
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+root { 
+    display: block;
+}
+.select-input-multiple{
+    margin-bottom: 10px;
+}
+
+

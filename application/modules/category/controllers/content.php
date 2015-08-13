@@ -1,0 +1,186 @@
+<?php
+
+if (!defined('BASEPATH'))
+    exit('No direct script access allowed');
+
+/**
+ * content controller
+ */
+class content extends Admin_Controller {
+    //--------------------------------------------------------------------
+
+    /**
+     * Constructor
+     *
+     */
+    public function __construct() {
+        parent::__construct();
+
+        $this->auth->restrict('Category.Content.View');
+        $this->load->model('category_model', null, true);
+        $this->lang->load('category');
+
+        Assets::add_css('flick/jquery-ui-1.8.13.custom.css');
+        Assets::add_js('jquery-ui-1.8.13.min.js');
+        Assets::add_css('jquery-ui-timepicker.css');
+        Assets::add_js('jquery-ui-timepicker-addon.js');
+        Template::set_block('sub_nav', 'content/_sub_nav');
+
+        Assets::add_module_js('category', 'category.js');
+    }
+
+    //--------------------------------------------------------------------
+
+    /**
+     * Displays a list of form data.
+     *
+     * @return void
+     */
+    public function index() {
+
+        // Deleting anything?
+        if (isset($_POST['delete'])) {
+            $checked = $this->input->post('checked');
+
+            if (is_array($checked) && count($checked)) {
+                $result = FALSE;
+                foreach ($checked as $pid) {
+                    $result = $this->category_model->delete($pid);
+                }
+
+                if ($result) {
+                    Template::set_message(count($checked) . ' ' . lang('category_delete_success'), 'success');
+                } else {
+                    Template::set_message(lang('category_delete_failure') . $this->category_model->error, 'error');
+                }
+            }
+        }
+
+        $records = $this->category_model->find_all();
+
+        Template::set('records', $records);
+        Template::set('toolbar_title', lang('category_manage'));
+        Template::render();
+    }
+
+    //--------------------------------------------------------------------
+
+    /**
+     * Creates a Category object.
+     *
+     * @return void
+     */
+    public function create() {
+        $this->auth->restrict('Category.Content.Create');
+
+        if (isset($_POST['save'])) {
+            if ($insert_id = $this->save_category()) {
+                // Log the activity
+                log_activity($this->current_user->id, lang('category_act_create_record') . ': ' . $insert_id . ' : ' . $this->input->ip_address(), 'category');
+
+                Template::set_message(lang('category_create_success'), 'success');
+                redirect(SITE_AREA . '/content/category');
+            } else {
+                Template::set_message(lang('category_create_failure') . $this->category_model->error, 'error');
+            }
+        }
+        Assets::add_module_js('category', 'category.js');
+
+        Template::set('toolbar_title', lang('category_manage'));
+        Template::render();
+    }
+
+    //--------------------------------------------------------------------
+
+    /**
+     * Allows editing of Category data.
+     *
+     * @return void
+     */
+    public function edit() {
+        $id = $this->uri->segment(5);
+
+        if (empty($id)) {
+            Template::set_message(lang('category_invalid_id'), 'error');
+            redirect(SITE_AREA . '/content/category');
+        }
+
+        if (isset($_POST['save'])) {
+            $this->auth->restrict('Category.Content.Edit');
+
+            if ($this->save_category('update', $id)) {
+                // Log the activity
+                log_activity($this->current_user->id, lang('category_act_edit_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'category');
+
+                Template::set_message(lang('category_edit_success'), 'success');
+                redirect(SITE_AREA . '/content/category');
+            } else {
+                Template::set_message(lang('category_edit_failure') . $this->category_model->error, 'error');
+            }
+        } else if (isset($_POST['delete'])) {
+            $this->auth->restrict('Category.Content.Delete');
+
+            if ($this->category_model->delete($id)) {
+                // Log the activity
+                log_activity($this->current_user->id, lang('category_act_delete_record') . ': ' . $id . ' : ' . $this->input->ip_address(), 'category');
+
+                Template::set_message(lang('category_delete_success'), 'success');
+
+                redirect(SITE_AREA . '/content/category');
+            } else {
+                Template::set_message(lang('category_delete_failure') . $this->category_model->error, 'error');
+            }
+        }
+        Template::set('category', $this->category_model->find($id));
+        Template::set('toolbar_title', lang('category_manage'));
+        Template::render();
+    }
+
+    //--------------------------------------------------------------------
+    //--------------------------------------------------------------------
+    // !PRIVATE METHODS
+    //--------------------------------------------------------------------
+
+    /**
+     * Summary
+     *
+     * @param String $type Either "insert" or "update"
+     * @param Int	 $id	The ID of the record to update, ignored on inserts
+     *
+     * @return Mixed    An INT id for successful inserts, TRUE for successful updates, else FALSE
+     */
+    private function save_category($type = 'insert', $id = 0) {
+        if ($type == 'update') {
+            $_POST['category_id'] = $id;
+        }
+
+        // make sure we only pass in the fields we want
+
+        $data = array();
+        $data['category_name'] = $this->input->post('category_category_name');
+
+        if ($type == 'insert') {
+            $id = $this->category_model->insert($data);
+
+            if (is_numeric($id)) {
+                $return = $id;
+            } else {
+                $return = FALSE;
+            }
+        } elseif ($type == 'update') {
+            if ($data['category_name'] != $this->category_model->current_name($id)) {
+                if ($this->category_model->is_existed($data['category_name'])) {
+                    $return = FALSE;
+                    $this->category_model->error = sprintf(lang('category_name_existed'), $data['category_name']);
+                } else
+                    $return = $this->category_model->update($id, $data);
+            }
+            else
+                $return = true;
+        }
+
+        return $return;
+    }
+
+    //--------------------------------------------------------------------
+}

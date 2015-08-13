@@ -1,0 +1,1107 @@
+#
+# TABLE STRUCTURE FOR: bf_activities
+#
+
+CREATE TABLE `bf_activities` (
+  `activity_id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `user_id` bigint(20) NOT NULL DEFAULT '0',
+  `activity` varchar(255) NOT NULL,
+  `module` varchar(255) NOT NULL,
+  `created_on` datetime NOT NULL,
+  `deleted` tinyint(12) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`activity_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=152 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (1, 1, 'Cập nhật từ khóa với ID: 2 : 118.70.13.161', 'keyword', '2013-12-26 11:04:02', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (2, 2, 'logged in from: 14.160.50.242', 'users', '2013-12-26 14:12:39', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (3, 1, 'logged in from: 118.70.13.161', 'users', '2013-12-26 14:18:52', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (4, 1, 'Migrate Type: site_settings_ to Version: 1 from: 118.70.13.161', 'migrations', '2013-12-26 14:19:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (5, 1, 'Migrate module: site_settings Version: 1 from: 118.70.13.161', 'migrations', '2013-12-26 14:19:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (6, 1, 'Migrate Type: revenue_ to Version: 1 from: 118.70.13.161', 'migrations', '2013-12-26 17:04:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (7, 1, 'Migrate module: revenue Version: 1 from: 118.70.13.161', 'migrations', '2013-12-26 17:04:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (8, 2, 'logged in from: 118.70.13.161', 'users', '2013-12-26 17:38:35', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (9, 2, 'Cập nhật dịch vụ với ID: 3 : 118.70.13.161', 'service', '2013-12-30 11:10:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (10, 2, 'logged in from: 118.70.13.161', 'users', '2013-12-30 14:04:21', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (11, 1, 'Các cài đặt của ứng dụng được lưu lại từ: 118.70.13.161', 'core', '2013-12-30 14:05:26', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (12, 2, 'Các cài đặt của ứng dụng được lưu lại từ: 118.70.13.161', 'core', '2013-12-30 14:05:33', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (13, 1, 'logged in from: 118.70.13.161', 'users', '2013-12-30 14:44:50', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (14, 1, 'đã tạo mới: Hoàng Mạnh Tiến', 'users', '2013-12-31 13:24:14', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (15, 2, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:26:06', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (16, 1, 'đã sửa đổi thành viên: Hoàng Mạnh Tiến', 'users', '2013-12-31 13:26:33', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (17, 1, 'đã sửa đổi thành viên: Hoàng Mạnh Tiến', 'users', '2013-12-31 13:26:44', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (18, 2, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:26:54', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (19, 1, 'FIXME (\"us_log_status_change\"): tienhm : Kích hoạted', 'users', '2013-12-31 13:26:58', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (20, 2, 'Các cài đặt của ứng dụng được lưu lại từ: 14.160.50.242', 'core', '2013-12-31 13:27:14', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (21, 1, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:27:32', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (22, 2, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:27:33', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (23, 1, 'Các cài đặt của ứng dụng được lưu lại từ: 14.160.50.242', 'core', '2013-12-31 13:28:46', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (24, 1, 'đã sửa đổi thành viên: Hoàng Mạnh Tiến', 'users', '2013-12-31 13:29:27', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (25, 3, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:29:37', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (26, 1, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 13:29:51', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (27, 3, 'đã đăng nhập từ: 118.70.13.161', 'users', '2013-12-31 13:30:16', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (28, 3, 'Tạo từ khóa với ID: 3 : 118.70.13.161', 'keyword', '2013-12-31 13:34:03', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (29, 3, 'Tạo từ khóa với ID: 4 : 118.70.13.161', 'keyword', '2013-12-31 13:35:13', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (30, 3, 'Tạo từ khóa với ID: 5 : 118.70.13.161', 'keyword', '2013-12-31 13:35:44', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (31, 3, 'Tạo từ khóa với ID: 6 : 118.70.13.161', 'keyword', '2013-12-31 13:43:48', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (32, 3, 'Cập nhật từ khóa với ID: 4 : 118.70.13.161', 'keyword', '2013-12-31 13:45:16', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (33, 3, 'Cập nhật từ khóa với ID: 3 : 118.70.13.161', 'keyword', '2013-12-31 13:46:01', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (34, 3, 'Cập nhật từ khóa với ID: 5 : 118.70.13.161', 'keyword', '2013-12-31 13:46:29', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (35, 3, 'Cập nhật từ khóa với ID: 6 : 118.70.13.161', 'keyword', '2013-12-31 13:46:41', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (36, 3, 'Tạo dịch vụ với ID: 4 : 118.70.13.161', 'service', '2013-12-31 13:48:30', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (37, 3, 'Tạo từ khóa với ID: 7 : 118.70.13.161', 'keyword', '2013-12-31 13:54:32', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (38, 3, 'Tạo từ khóa với ID: 8 : 118.70.13.161', 'keyword', '2013-12-31 13:55:08', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (39, 3, 'Cập nhật từ khóa với ID: 8 : 118.70.13.161', 'keyword', '2013-12-31 15:21:46', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (40, 3, 'Cập nhật từ khóa với ID: 8 : 118.70.13.161', 'keyword', '2013-12-31 15:22:00', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (41, 3, 'Cập nhật từ khóa với ID: 8 : 118.70.13.161', 'keyword', '2013-12-31 15:22:08', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (42, 3, 'Cập nhật từ khóa với ID: 7 : 118.70.13.161', 'keyword', '2013-12-31 15:22:20', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (43, 3, 'Cập nhật từ khóa với ID: 7 : 118.70.13.161', 'keyword', '2013-12-31 15:22:31', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (44, 3, 'Tạo từ khóa với ID: 9 : 118.70.13.161', 'keyword', '2013-12-31 15:22:58', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (45, 1, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 15:34:27', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (46, 2, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 16:06:20', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (47, 2, 'đã đăng nhập từ: 14.160.50.242', 'users', '2013-12-31 16:06:35', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (48, 3, 'đã đăng nhập từ: 118.70.13.161', 'users', '2014-01-02 13:36:09', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (49, 3, 'đã đăng nhập từ: 118.70.13.161', 'users', '2014-01-03 16:26:09', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (50, 1, 'Log file January 3, 2014 deleted from: 14.160.50.242', 'logs', '2014-01-03 17:37:07', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (51, 3, 'đã đăng nhập từ: 118.70.13.161', 'users', '2014-01-06 09:48:50', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (52, 3, 'đã đăng nhập từ: ::1', 'users', '2014-01-06 14:53:28', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (53, 3, 'Đã cập nhật với ID: 2 : ::1', 'shortcode', '2014-01-06 14:53:53', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (54, 3, 'Cập nhật từ khóa với ID: 3 : ::1', 'keyword', '2014-01-06 15:55:45', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (55, 3, 'Cập nhật từ khóa với ID: 3 : ::1', 'keyword', '2014-01-06 15:57:26', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (56, 3, 'Cập nhật từ khóa với ID: 3 : ::1', 'keyword', '2014-01-06 15:58:11', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (57, 3, 'Cập nhật từ khóa với ID: 4 : ::1', 'keyword', '2014-01-06 17:21:16', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (58, 3, 'Cập nhật từ khóa với ID: 5 : ::1', 'keyword', '2014-01-06 17:32:12', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (59, 3, 'Cập nhật từ khóa với ID: 5 : ::1', 'keyword', '2014-01-06 17:45:52', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (60, 3, 'đã đăng nhập từ: ::1', 'users', '2014-01-07 13:45:28', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (61, 3, 'Cập nhật từ khóa với ID: 6 : ::1', 'keyword', '2014-01-07 14:25:18', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (62, 3, 'Tạo từ khóa với ID: 10 : ::1', 'keyword', '2014-01-07 14:43:04', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (63, 3, 'đã đăng nhập từ: ::1', 'users', '2014-01-16 11:34:21', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (64, 3, 'đã đăng nhập từ: ::1', 'users', '2014-01-22 11:37:58', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (65, 3, 'đã đăng nhập từ: ::1', 'users', '2014-02-11 14:26:08', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (66, 3, 'đã đăng nhập từ: ::1', 'users', '2014-02-15 11:15:48', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (67, 3, 'Migrate Type: logapi_ to Version: 1 from: ::1', 'migrations', '2014-02-15 11:16:02', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (68, 3, 'Migrate module: logapi Version: 1 from: ::1', 'migrations', '2014-02-15 11:16:02', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (69, 3, 'đã đăng nhập từ: ::1', 'users', '2014-03-17 17:03:56', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (70, 2, 'đã đăng nhập từ: ::1', 'users', '2014-06-26 16:12:49', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (71, 3, 'đã đăng nhập từ: ::1', 'users', '2014-07-15 11:15:04', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (72, 3, 'Các cài đặt của ứng dụng được lưu lại từ: ::1', 'core', '2014-07-15 11:24:09', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (73, 3, 'đã đăng nhập từ: ::1', 'users', '2014-07-16 09:57:55', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (74, 3, 'Migrate Type: keyword_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:15', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (75, 3, 'Migrate module: keyword Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:15', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (76, 3, 'Migrate Type: keyword_ to Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:21', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (77, 3, 'Migrate module: keyword Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:21', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (78, 3, 'Migrate Type: keyword_ to Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:26', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (79, 3, 'Migrate module: keyword Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:26', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (80, 3, 'Migrate Type: logapi_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:33', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (81, 3, 'Migrate module: logapi Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:33', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (82, 3, 'Migrate Type: revenue_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:39', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (83, 3, 'Migrate module: revenue Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:39', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (84, 3, 'Migrate Type: service_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:47', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (85, 3, 'Migrate module: service Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:47', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (86, 3, 'Migrate Type: shortcode_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:54', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (87, 3, 'Migrate module: shortcode Version: 0 from: ::1', 'migrations', '2014-07-16 09:58:54', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (88, 3, 'Migrate Type: transactions_ Uninstalled Version: 0 from: ::1', 'migrations', '2014-07-16 09:59:05', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (89, 3, 'Migrate module: transactions Version: 0 from: ::1', 'migrations', '2014-07-16 09:59:05', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (90, 3, 'đã đăng nhập từ: ::1', 'users', '2014-07-16 13:58:16', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (91, 3, 'Các cài đặt của ứng dụng được lưu lại từ: ::1', 'core', '2014-07-16 14:03:20', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (92, 3, 'đã đăng nhập từ: ::1', 'users', '2014-07-16 14:19:28', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (93, 3, 'Created Module: books : ::1', 'modulebuilder', '2014-07-16 14:22:27', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (94, 3, 'Created Module: Category : ::1', 'modulebuilder', '2014-07-16 14:24:16', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (95, 3, 'Các cài đặt của ứng dụng được lưu lại từ: ::1', 'core', '2014-07-16 14:24:38', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (96, 3, 'Các cài đặt của ứng dụng được lưu lại từ: ::1', 'core', '2014-07-16 14:24:59', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (97, 3, 'Created record with ID: 1 : ::1', 'category', '2014-07-17 10:08:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (98, 3, 'Created record with ID: 2 : ::1', 'category', '2014-07-17 10:08:30', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (99, 3, 'Created record with ID: 3 : ::1', 'category', '2014-07-17 10:08:45', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (100, 3, 'Created record with ID: 4 : ::1', 'category', '2014-07-17 10:08:51', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (101, 3, 'đã đăng nhập từ: ::1', 'users', '2014-09-21 10:47:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (102, 3, 'Các cài đặt của ứng dụng được lưu lại từ: ::1', 'core', '2014-09-21 10:51:54', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (103, 3, 'đã sửa đổi thành viên: Hoàng Mạnh Tiến', 'users', '2014-09-21 10:52:05', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (104, 3, 'modified user: Hoàng Mạnh Tiến', 'users', '2014-09-21 10:52:17', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (105, 3, 'Updated record with ID: 2 : ::1', 'category', '2014-09-21 11:05:53', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (106, 3, 'Created record with ID: 3 : ::1', 'books', '2014-09-25 09:53:03', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (107, 3, 'Created record with ID: 4 : ::1', 'books', '2014-09-25 10:23:31', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (108, 3, 'Created record with ID: 5 : ::1', 'books', '2014-09-25 10:23:53', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (109, 3, 'Updated record with ID: 5 : ::1', 'books', '2014-09-26 20:58:10', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (110, 3, 'Updated record with ID: 3 : ::1', 'books', '2014-09-26 21:01:06', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (111, 3, 'Updated record with ID: 3 : ::1', 'books', '2014-09-26 21:01:59', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (112, 3, 'Updated record with ID: 5 : ::1', 'books', '2014-09-26 21:02:19', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (113, 3, 'Created Module: Search Tool : ::1', 'modulebuilder', '2014-09-26 21:03:15', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (114, 3, 'đã đăng nhập từ: ::1', 'users', '2014-10-13 19:49:57', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (115, 3, 'Updated record with ID: 3 : ::1', 'books', '2014-10-13 19:50:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (116, 3, 'Updated record with ID: 3 : ::1', 'books', '2014-10-13 19:56:25', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (117, 3, 'đã đăng nhập từ: ::1', 'users', '2015-01-20 11:04:58', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (118, 3, 'đã đăng nhập từ: ::1', 'users', '2015-01-20 11:06:08', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (119, 3, 'đã đăng nhập từ: ::1', 'users', '2015-03-26 08:12:04', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (120, 3, 'Updated record with ID: 3 : ::1', 'books', '2015-03-26 08:24:37', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (121, 3, 'Created record with ID: 6 : ::1', 'books', '2015-03-26 09:45:04', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (122, 3, 'Created Module: Collections : ::1', 'modulebuilder', '2015-03-26 10:09:15', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (123, 3, 'Migrate Type: collections_ Uninstalled Version: 0 from: ::1', 'migrations', '2015-03-26 10:32:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (124, 3, 'Migrate module: collections Version: 0 from: ::1', 'migrations', '2015-03-26 10:32:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (125, 3, 'Created Module: Collections : ::1', 'modulebuilder', '2015-03-26 10:33:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (126, 3, 'Created record with ID: 1 : ::1', 'collections', '2015-03-26 10:33:42', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (127, 3, 'Created record with ID: 2 : ::1', 'collections', '2015-03-26 11:17:19', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (128, 3, 'Updated record with ID: 2 : ::1', 'collections', '2015-03-26 11:24:06', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (129, 3, 'Updated record with ID: 2 : ::1', 'collections', '2015-03-26 11:24:54', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (130, 3, 'Updated record with ID: 2 : ::1', 'collections', '2015-03-27 11:29:31', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (131, 3, 'Updated record with ID: 2 : ::1', 'collections', '2015-03-27 11:29:37', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (132, 3, 'Updated record with ID: 2 : ::1', 'collections', '2015-03-27 11:35:11', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (133, 3, 'đã đăng nhập từ: ::1', 'users', '2015-03-30 08:35:58', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (134, 3, 'Created record with ID: 3 : ::1', 'collections', '2015-03-30 09:30:12', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (135, 3, 'Created record with ID: 7 : ::1', 'books', '2015-03-30 09:36:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (136, 3, 'Created record with ID: 8 : ::1', 'books', '2015-03-30 10:27:02', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (137, 2, 'đã đăng nhập từ: ::1', 'users', '2015-06-23 16:10:29', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (138, 2, 'đã xóa thành viên: hanhdt', 'users', '2015-06-23 16:11:00', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (139, 2, 'đã đăng nhập từ: ::1', 'users', '2015-07-19 09:19:47', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (140, 2, 'đã tạo mới: learner1', 'users', '2015-07-19 09:21:20', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (141, 2, 'đã đăng nhập từ: ::1', 'users', '2015-07-19 09:21:27', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (142, 4, 'đã đăng nhập từ: ::1', 'users', '2015-07-19 09:22:40', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (143, 4, 'Created record with ID: 9 : ::1', 'books', '2015-07-19 09:23:30', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (144, 4, 'Created record with ID: 10 : ::1', 'books', '2015-07-19 10:50:05', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (145, 2, 'đã đăng nhập từ: ::1', 'users', '2015-07-28 03:38:03', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (146, 2, 'Created record with ID: 11 : ::1', 'books', '2015-07-28 03:43:23', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (147, 2, 'đã đăng nhập từ: ::1', 'users', '2015-08-13 16:17:34', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (148, 2, 'Created record with ID: 12 : ::1', 'books', '2015-08-13 16:29:00', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (149, 2, 'Updated record with ID: 12 : ::1', 'books', '2015-08-13 16:33:52', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (150, 2, 'Created record with ID: 13 : ::1', 'books', '2015-08-13 16:34:04', 0);
+INSERT INTO bf_activities (`activity_id`, `user_id`, `activity`, `module`, `created_on`, `deleted`) VALUES (151, 2, 'Created record with ID: 14 : ::1', 'books', '2015-08-13 16:34:24', 0);
+
+
+#
+# TABLE STRUCTURE FOR: bf_book_user
+#
+
+CREATE TABLE `bf_book_user` (
+  `book_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
+  `permission` int(11) NOT NULL COMMENT '1: read, 2: edit, 4: delete/unpublish',
+  PRIMARY KEY (`book_id`,`user_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (3, 3, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (5, 3, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (6, 3, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (8, 3, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (9, 4, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (10, 4, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (11, 2, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (12, 2, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (13, 2, 7);
+INSERT INTO bf_book_user (`book_id`, `user_id`, `permission`) VALUES (14, 2, 7);
+
+
+#
+# TABLE STRUCTURE FOR: bf_books
+#
+
+CREATE TABLE `bf_books` (
+  `book_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_id` int(11) NOT NULL,
+  `title` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
+  `description` text COLLATE utf8_unicode_ci NOT NULL,
+  `filename` varchar(150) COLLATE utf8_unicode_ci DEFAULT NULL,
+  `file_type` varchar(5) COLLATE utf8_unicode_ci NOT NULL DEFAULT 'html',
+  `created_on` datetime NOT NULL,
+  `modified_on` datetime DEFAULT NULL,
+  `published` enum('Y','N') COLLATE utf8_unicode_ci DEFAULT 'N',
+  `tag` text COLLATE utf8_unicode_ci,
+  PRIMARY KEY (`book_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (3, 1, 'Kinh tế học', 'Meoemoe', 'assets/books/9490916d77ad95c08d2b13830e48728f.html', 'html', '2014-09-25 09:53:03', '2015-03-26 08:24:37', 'Y', 'kinh tế, lạm phát');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (5, 3, 'Tiếng Anh chuyên ngành', '', 'assets/books/tienganhcn.html', 'html', '2014-09-25 10:23:53', '2014-09-26 21:02:19', 'N', 'Tiếng anh, english');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (6, 4, 'Luật đường bộ', 'Luật đường bộ điều 3', 'assets/books/5e3b849b513f7a3b787a25146889292b.html', 'html', '2015-03-26 09:45:04', NULL, 'Y', 'luat, đường bộ');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (8, 4, 'Luật đường sắt', 'Luật đường sắt', 'assets/books/038c877f68880ecd73db3ed5eea448df.html', 'html', '2015-03-30 10:27:02', NULL, 'Y', '');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (9, 3, 'Tiếng Anh cho trẻ em - Tập 1', 'Tiếng Anh cơ bản cho trẻ từ 1-3 tuổi', 'assets/books/9d4f8b2f43cc467d2eb69dffb8250031.jpg', 'jpg', '2015-07-19 09:23:30', '2015-07-19 10:20:54', 'Y', 'tiếng anh, trẻ em, 1-3 tuổi');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (10, 3, 'Tiếng Anh cho trẻ em - Tập 2', '', 'assets/books/e596d8615cde85f08ce4c759356c87cd.html', 'html', '2015-07-19 10:50:05', NULL, 'Y', '');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (11, 3, 'Tieng anh chuyen nganh', 'Tieng anh', 'assets/books/d1086de939a05301dcf05019ec6298d9.doc', 'doc', '2015-07-28 03:43:23', '2015-07-28 03:44:01', 'Y', '');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (12, 3, 'Tiếng Anh cho trẻ em - Tập 3', '', 'assets/books/58ffffc20aef5d1efa9b68d35576269b.html', 'pdf', '2015-08-13 16:29:00', '2015-08-13 16:33:52', 'Y', '');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (13, 3, 'Tiếng Anh cho trẻ em - Tập 1', '', 'assets/books/b29426e6072fa9865dfc13bb615018e3.pdf', 'pdf', '2015-08-13 16:34:04', '2015-08-13 16:34:11', 'Y', '');
+INSERT INTO bf_books (`book_id`, `category_id`, `title`, `description`, `filename`, `file_type`, `created_on`, `modified_on`, `published`, `tag`) VALUES (14, 3, 'Tiếng Anh cho trẻ em - Tập 2', '', 'assets/books/85c837d8c85f130aca2b958b5ce005a0.html', 'html', '2015-08-13 16:34:24', NULL, 'Y', '');
+
+
+#
+# TABLE STRUCTURE FOR: bf_categories
+#
+
+CREATE TABLE `bf_categories` (
+  `category_id` int(11) NOT NULL AUTO_INCREMENT,
+  `category_name` varchar(150) COLLATE utf8_unicode_ci NOT NULL,
+  `created_on` datetime NOT NULL,
+  `modifided_on` datetime DEFAULT NULL,
+  PRIMARY KEY (`category_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO bf_categories (`category_id`, `category_name`, `created_on`, `modifided_on`) VALUES (1, 'Kinh tế', '2014-07-17 10:08:30', NULL);
+INSERT INTO bf_categories (`category_id`, `category_name`, `created_on`, `modifided_on`) VALUES (3, 'Ngoại ngữ', '2014-07-17 10:08:45', NULL);
+INSERT INTO bf_categories (`category_id`, `category_name`, `created_on`, `modifided_on`) VALUES (4, 'Luật', '2014-07-17 10:08:50', NULL);
+
+
+#
+# TABLE STRUCTURE FOR: bf_collection_book
+#
+
+CREATE TABLE `bf_collection_book` (
+  `collection_id` int(11) DEFAULT NULL,
+  `book_id` int(11) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO bf_collection_book (`collection_id`, `book_id`) VALUES (2, 5);
+INSERT INTO bf_collection_book (`collection_id`, `book_id`) VALUES (3, 6);
+INSERT INTO bf_collection_book (`collection_id`, `book_id`) VALUES (3, 8);
+
+
+#
+# TABLE STRUCTURE FOR: bf_collections
+#
+
+CREATE TABLE `bf_collections` (
+  `collection_id` int(11) NOT NULL AUTO_INCREMENT,
+  `collection_name` varchar(50) COLLATE utf8_unicode_ci NOT NULL DEFAULT '0',
+  `collection_owner` int(11) NOT NULL DEFAULT '0',
+  `publish` int(11) NOT NULL DEFAULT '0',
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `updated_on` datetime DEFAULT NULL,
+  PRIMARY KEY (`collection_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
+
+INSERT INTO bf_collections (`collection_id`, `collection_name`, `collection_owner`, `publish`, `created_on`, `updated_on`) VALUES (2, 'Meo3', 3, 1, '2015-03-26 11:17:19', '2015-03-27 11:35:11');
+INSERT INTO bf_collections (`collection_id`, `collection_name`, `collection_owner`, `publish`, `created_on`, `updated_on`) VALUES (3, 'Luật Đường Bộ', 3, 1, '2015-03-30 09:30:11', NULL);
+
+
+#
+# TABLE STRUCTURE FOR: bf_countries
+#
+
+CREATE TABLE `bf_countries` (
+  `iso` char(2) NOT NULL DEFAULT 'US',
+  `name` varchar(80) NOT NULL,
+  `printable_name` varchar(80) NOT NULL,
+  `iso3` char(3) DEFAULT NULL,
+  `numcode` smallint(6) DEFAULT NULL,
+  PRIMARY KEY (`iso`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AD', 'ANDORRA', 'Andorra', 'AND', 20);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AE', 'UNITED ARAB EMIRATES', 'United Arab Emirates', 'ARE', 784);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AF', 'AFGHANISTAN', 'Afghanistan', 'AFG', 4);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AG', 'ANTIGUA AND BARBUDA', 'Antigua and Barbuda', 'ATG', 28);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AI', 'ANGUILLA', 'Anguilla', 'AIA', 660);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AL', 'ALBANIA', 'Albania', 'ALB', 8);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AM', 'ARMENIA', 'Armenia', 'ARM', 51);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AN', 'NETHERLANDS ANTILLES', 'Netherlands Antilles', 'ANT', 530);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AO', 'ANGOLA', 'Angola', 'AGO', 24);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AQ', 'ANTARCTICA', 'Antarctica', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AR', 'ARGENTINA', 'Argentina', 'ARG', 32);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AS', 'AMERICAN SAMOA', 'American Samoa', 'ASM', 16);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AT', 'AUSTRIA', 'Austria', 'AUT', 40);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AU', 'AUSTRALIA', 'Australia', 'AUS', 36);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AW', 'ARUBA', 'Aruba', 'ABW', 533);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('AZ', 'AZERBAIJAN', 'Azerbaijan', 'AZE', 31);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BA', 'BOSNIA AND HERZEGOVINA', 'Bosnia and Herzegovina', 'BIH', 70);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BB', 'BARBADOS', 'Barbados', 'BRB', 52);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BD', 'BANGLADESH', 'Bangladesh', 'BGD', 50);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BE', 'BELGIUM', 'Belgium', 'BEL', 56);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BF', 'BURKINA FASO', 'Burkina Faso', 'BFA', 854);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BG', 'BULGARIA', 'Bulgaria', 'BGR', 100);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BH', 'BAHRAIN', 'Bahrain', 'BHR', 48);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BI', 'BURUNDI', 'Burundi', 'BDI', 108);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BJ', 'BENIN', 'Benin', 'BEN', 204);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BM', 'BERMUDA', 'Bermuda', 'BMU', 60);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BN', 'BRUNEI DARUSSALAM', 'Brunei Darussalam', 'BRN', 96);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BO', 'BOLIVIA', 'Bolivia', 'BOL', 68);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BR', 'BRAZIL', 'Brazil', 'BRA', 76);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BS', 'BAHAMAS', 'Bahamas', 'BHS', 44);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BT', 'BHUTAN', 'Bhutan', 'BTN', 64);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BV', 'BOUVET ISLAND', 'Bouvet Island', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BW', 'BOTSWANA', 'Botswana', 'BWA', 72);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BY', 'BELARUS', 'Belarus', 'BLR', 112);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('BZ', 'BELIZE', 'Belize', 'BLZ', 84);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CA', 'CANADA', 'Canada', 'CAN', 124);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CC', 'COCOS (KEELING) ISLANDS', 'Cocos (Keeling) Islands', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CD', 'CONGO, THE DEMOCRATIC REPUBLIC OF THE', 'Congo, the Democratic Republic of the', 'COD', 180);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CF', 'CENTRAL AFRICAN REPUBLIC', 'Central African Republic', 'CAF', 140);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CG', 'CONGO', 'Congo', 'COG', 178);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CH', 'SWITZERLAND', 'Switzerland', 'CHE', 756);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CI', 'COTE D\'IVOIRE', 'Cote D\'Ivoire', 'CIV', 384);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CK', 'COOK ISLANDS', 'Cook Islands', 'COK', 184);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CL', 'CHILE', 'Chile', 'CHL', 152);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CM', 'CAMEROON', 'Cameroon', 'CMR', 120);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CN', 'CHINA', 'China', 'CHN', 156);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CO', 'COLOMBIA', 'Colombia', 'COL', 170);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CR', 'COSTA RICA', 'Costa Rica', 'CRI', 188);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CS', 'SERBIA AND MONTENEGRO', 'Serbia and Montenegro', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CU', 'CUBA', 'Cuba', 'CUB', 192);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CV', 'CAPE VERDE', 'Cape Verde', 'CPV', 132);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CX', 'CHRISTMAS ISLAND', 'Christmas Island', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CY', 'CYPRUS', 'Cyprus', 'CYP', 196);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('CZ', 'CZECH REPUBLIC', 'Czech Republic', 'CZE', 203);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DE', 'GERMANY', 'Germany', 'DEU', 276);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DJ', 'DJIBOUTI', 'Djibouti', 'DJI', 262);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DK', 'DENMARK', 'Denmark', 'DNK', 208);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DM', 'DOMINICA', 'Dominica', 'DMA', 212);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DO', 'DOMINICAN REPUBLIC', 'Dominican Republic', 'DOM', 214);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('DZ', 'ALGERIA', 'Algeria', 'DZA', 12);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('EC', 'ECUADOR', 'Ecuador', 'ECU', 218);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('EE', 'ESTONIA', 'Estonia', 'EST', 233);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('EG', 'EGYPT', 'Egypt', 'EGY', 818);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('EH', 'WESTERN SAHARA', 'Western Sahara', 'ESH', 732);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ER', 'ERITREA', 'Eritrea', 'ERI', 232);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ES', 'SPAIN', 'Spain', 'ESP', 724);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ET', 'ETHIOPIA', 'Ethiopia', 'ETH', 231);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FI', 'FINLAND', 'Finland', 'FIN', 246);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FJ', 'FIJI', 'Fiji', 'FJI', 242);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FK', 'FALKLAND ISLANDS (MALVINAS)', 'Falkland Islands (Malvinas)', 'FLK', 238);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FM', 'MICRONESIA, FEDERATED STATES OF', 'Micronesia, Federated States of', 'FSM', 583);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FO', 'FAROE ISLANDS', 'Faroe Islands', 'FRO', 234);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('FR', 'FRANCE', 'France', 'FRA', 250);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GA', 'GABON', 'Gabon', 'GAB', 266);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GB', 'UNITED KINGDOM', 'United Kingdom', 'GBR', 826);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GD', 'GRENADA', 'Grenada', 'GRD', 308);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GE', 'GEORGIA', 'Georgia', 'GEO', 268);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GF', 'FRENCH GUIANA', 'French Guiana', 'GUF', 254);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GH', 'GHANA', 'Ghana', 'GHA', 288);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GI', 'GIBRALTAR', 'Gibraltar', 'GIB', 292);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GL', 'GREENLAND', 'Greenland', 'GRL', 304);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GM', 'GAMBIA', 'Gambia', 'GMB', 270);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GN', 'GUINEA', 'Guinea', 'GIN', 324);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GP', 'GUADELOUPE', 'Guadeloupe', 'GLP', 312);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GQ', 'EQUATORIAL GUINEA', 'Equatorial Guinea', 'GNQ', 226);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GR', 'GREECE', 'Greece', 'GRC', 300);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GS', 'SOUTH GEORGIA AND THE SOUTH SANDWICH ISLANDS', 'South Georgia and the South Sandwich Islands', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GT', 'GUATEMALA', 'Guatemala', 'GTM', 320);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GU', 'GUAM', 'Guam', 'GUM', 316);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GW', 'GUINEA-BISSAU', 'Guinea-Bissau', 'GNB', 624);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('GY', 'GUYANA', 'Guyana', 'GUY', 328);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HK', 'HONG KONG', 'Hong Kong', 'HKG', 344);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HM', 'HEARD ISLAND AND MCDONALD ISLANDS', 'Heard Island and Mcdonald Islands', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HN', 'HONDURAS', 'Honduras', 'HND', 340);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HR', 'CROATIA', 'Croatia', 'HRV', 191);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HT', 'HAITI', 'Haiti', 'HTI', 332);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('HU', 'HUNGARY', 'Hungary', 'HUN', 348);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ID', 'INDONESIA', 'Indonesia', 'IDN', 360);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IE', 'IRELAND', 'Ireland', 'IRL', 372);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IL', 'ISRAEL', 'Israel', 'ISR', 376);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IN', 'INDIA', 'India', 'IND', 356);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IO', 'BRITISH INDIAN OCEAN TERRITORY', 'British Indian Ocean Territory', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IQ', 'IRAQ', 'Iraq', 'IRQ', 368);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IR', 'IRAN, ISLAMIC REPUBLIC OF', 'Iran, Islamic Republic of', 'IRN', 364);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IS', 'ICELAND', 'Iceland', 'ISL', 352);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('IT', 'ITALY', 'Italy', 'ITA', 380);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('JM', 'JAMAICA', 'Jamaica', 'JAM', 388);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('JO', 'JORDAN', 'Jordan', 'JOR', 400);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('JP', 'JAPAN', 'Japan', 'JPN', 392);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KE', 'KENYA', 'Kenya', 'KEN', 404);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KG', 'KYRGYZSTAN', 'Kyrgyzstan', 'KGZ', 417);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KH', 'CAMBODIA', 'Cambodia', 'KHM', 116);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KI', 'KIRIBATI', 'Kiribati', 'KIR', 296);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KM', 'COMOROS', 'Comoros', 'COM', 174);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KN', 'SAINT KITTS AND NEVIS', 'Saint Kitts and Nevis', 'KNA', 659);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KP', 'KOREA, DEMOCRATIC PEOPLE\'S REPUBLIC OF', 'Korea, Democratic People\'s Republic of', 'PRK', 408);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KR', 'KOREA, REPUBLIC OF', 'Korea, Republic of', 'KOR', 410);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KW', 'KUWAIT', 'Kuwait', 'KWT', 414);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KY', 'CAYMAN ISLANDS', 'Cayman Islands', 'CYM', 136);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('KZ', 'KAZAKHSTAN', 'Kazakhstan', 'KAZ', 398);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LA', 'LAO PEOPLE\'S DEMOCRATIC REPUBLIC', 'Lao People\'s Democratic Republic', 'LAO', 418);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LB', 'LEBANON', 'Lebanon', 'LBN', 422);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LC', 'SAINT LUCIA', 'Saint Lucia', 'LCA', 662);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LI', 'LIECHTENSTEIN', 'Liechtenstein', 'LIE', 438);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LK', 'SRI LANKA', 'Sri Lanka', 'LKA', 144);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LR', 'LIBERIA', 'Liberia', 'LBR', 430);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LS', 'LESOTHO', 'Lesotho', 'LSO', 426);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LT', 'LITHUANIA', 'Lithuania', 'LTU', 440);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LU', 'LUXEMBOURG', 'Luxembourg', 'LUX', 442);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LV', 'LATVIA', 'Latvia', 'LVA', 428);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('LY', 'LIBYAN ARAB JAMAHIRIYA', 'Libyan Arab Jamahiriya', 'LBY', 434);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MA', 'MOROCCO', 'Morocco', 'MAR', 504);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MC', 'MONACO', 'Monaco', 'MCO', 492);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MD', 'MOLDOVA, REPUBLIC OF', 'Moldova, Republic of', 'MDA', 498);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MG', 'MADAGASCAR', 'Madagascar', 'MDG', 450);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MH', 'MARSHALL ISLANDS', 'Marshall Islands', 'MHL', 584);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MK', 'MACEDONIA, THE FORMER YUGOSLAV REPUBLIC OF', 'Macedonia, the Former Yugoslav Republic of', 'MKD', 807);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ML', 'MALI', 'Mali', 'MLI', 466);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MM', 'MYANMAR', 'Myanmar', 'MMR', 104);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MN', 'MONGOLIA', 'Mongolia', 'MNG', 496);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MO', 'MACAO', 'Macao', 'MAC', 446);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MP', 'NORTHERN MARIANA ISLANDS', 'Northern Mariana Islands', 'MNP', 580);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MQ', 'MARTINIQUE', 'Martinique', 'MTQ', 474);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MR', 'MAURITANIA', 'Mauritania', 'MRT', 478);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MS', 'MONTSERRAT', 'Montserrat', 'MSR', 500);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MT', 'MALTA', 'Malta', 'MLT', 470);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MU', 'MAURITIUS', 'Mauritius', 'MUS', 480);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MV', 'MALDIVES', 'Maldives', 'MDV', 462);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MW', 'MALAWI', 'Malawi', 'MWI', 454);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MX', 'MEXICO', 'Mexico', 'MEX', 484);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MY', 'MALAYSIA', 'Malaysia', 'MYS', 458);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('MZ', 'MOZAMBIQUE', 'Mozambique', 'MOZ', 508);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NA', 'NAMIBIA', 'Namibia', 'NAM', 516);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NC', 'NEW CALEDONIA', 'New Caledonia', 'NCL', 540);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NE', 'NIGER', 'Niger', 'NER', 562);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NF', 'NORFOLK ISLAND', 'Norfolk Island', 'NFK', 574);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NG', 'NIGERIA', 'Nigeria', 'NGA', 566);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NI', 'NICARAGUA', 'Nicaragua', 'NIC', 558);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NL', 'NETHERLANDS', 'Netherlands', 'NLD', 528);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NO', 'NORWAY', 'Norway', 'NOR', 578);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NP', 'NEPAL', 'Nepal', 'NPL', 524);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NR', 'NAURU', 'Nauru', 'NRU', 520);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NU', 'NIUE', 'Niue', 'NIU', 570);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('NZ', 'NEW ZEALAND', 'New Zealand', 'NZL', 554);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('OM', 'OMAN', 'Oman', 'OMN', 512);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PA', 'PANAMA', 'Panama', 'PAN', 591);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PE', 'PERU', 'Peru', 'PER', 604);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PF', 'FRENCH POLYNESIA', 'French Polynesia', 'PYF', 258);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PG', 'PAPUA NEW GUINEA', 'Papua New Guinea', 'PNG', 598);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PH', 'PHILIPPINES', 'Philippines', 'PHL', 608);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PK', 'PAKISTAN', 'Pakistan', 'PAK', 586);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PL', 'POLAND', 'Poland', 'POL', 616);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PM', 'SAINT PIERRE AND MIQUELON', 'Saint Pierre and Miquelon', 'SPM', 666);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PN', 'PITCAIRN', 'Pitcairn', 'PCN', 612);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PR', 'PUERTO RICO', 'Puerto Rico', 'PRI', 630);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PS', 'PALESTINIAN TERRITORY, OCCUPIED', 'Palestinian Territory, Occupied', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PT', 'PORTUGAL', 'Portugal', 'PRT', 620);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PW', 'PALAU', 'Palau', 'PLW', 585);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('PY', 'PARAGUAY', 'Paraguay', 'PRY', 600);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('QA', 'QATAR', 'Qatar', 'QAT', 634);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('RE', 'REUNION', 'Reunion', 'REU', 638);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('RO', 'ROMANIA', 'Romania', 'ROM', 642);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('RU', 'RUSSIAN FEDERATION', 'Russian Federation', 'RUS', 643);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('RW', 'RWANDA', 'Rwanda', 'RWA', 646);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SA', 'SAUDI ARABIA', 'Saudi Arabia', 'SAU', 682);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SB', 'SOLOMON ISLANDS', 'Solomon Islands', 'SLB', 90);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SC', 'SEYCHELLES', 'Seychelles', 'SYC', 690);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SD', 'SUDAN', 'Sudan', 'SDN', 736);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SE', 'SWEDEN', 'Sweden', 'SWE', 752);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SG', 'SINGAPORE', 'Singapore', 'SGP', 702);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SH', 'SAINT HELENA', 'Saint Helena', 'SHN', 654);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SI', 'SLOVENIA', 'Slovenia', 'SVN', 705);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SJ', 'SVALBARD AND JAN MAYEN', 'Svalbard and Jan Mayen', 'SJM', 744);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SK', 'SLOVAKIA', 'Slovakia', 'SVK', 703);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SL', 'SIERRA LEONE', 'Sierra Leone', 'SLE', 694);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SM', 'SAN MARINO', 'San Marino', 'SMR', 674);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SN', 'SENEGAL', 'Senegal', 'SEN', 686);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SO', 'SOMALIA', 'Somalia', 'SOM', 706);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SR', 'SURINAME', 'Suriname', 'SUR', 740);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ST', 'SAO TOME AND PRINCIPE', 'Sao Tome and Principe', 'STP', 678);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SV', 'EL SALVADOR', 'El Salvador', 'SLV', 222);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SY', 'SYRIAN ARAB REPUBLIC', 'Syrian Arab Republic', 'SYR', 760);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('SZ', 'SWAZILAND', 'Swaziland', 'SWZ', 748);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TC', 'TURKS AND CAICOS ISLANDS', 'Turks and Caicos Islands', 'TCA', 796);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TD', 'CHAD', 'Chad', 'TCD', 148);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TF', 'FRENCH SOUTHERN TERRITORIES', 'French Southern Territories', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TG', 'TOGO', 'Togo', 'TGO', 768);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TH', 'THAILAND', 'Thailand', 'THA', 764);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TJ', 'TAJIKISTAN', 'Tajikistan', 'TJK', 762);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TK', 'TOKELAU', 'Tokelau', 'TKL', 772);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TL', 'TIMOR-LESTE', 'Timor-Leste', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TM', 'TURKMENISTAN', 'Turkmenistan', 'TKM', 795);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TN', 'TUNISIA', 'Tunisia', 'TUN', 788);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TO', 'TONGA', 'Tonga', 'TON', 776);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TR', 'TURKEY', 'Turkey', 'TUR', 792);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TT', 'TRINIDAD AND TOBAGO', 'Trinidad and Tobago', 'TTO', 780);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TV', 'TUVALU', 'Tuvalu', 'TUV', 798);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TW', 'TAIWAN, PROVINCE OF CHINA', 'Taiwan, Province of China', 'TWN', 158);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('TZ', 'TANZANIA, UNITED REPUBLIC OF', 'Tanzania, United Republic of', 'TZA', 834);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('UA', 'UKRAINE', 'Ukraine', 'UKR', 804);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('UG', 'UGANDA', 'Uganda', 'UGA', 800);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('UM', 'UNITED STATES MINOR OUTLYING ISLANDS', 'United States Minor Outlying Islands', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('US', 'UNITED STATES', 'United States', 'USA', 840);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('UY', 'URUGUAY', 'Uruguay', 'URY', 858);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('UZ', 'UZBEKISTAN', 'Uzbekistan', 'UZB', 860);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VA', 'HOLY SEE (VATICAN CITY STATE)', 'Holy See (Vatican City State)', 'VAT', 336);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VC', 'SAINT VINCENT AND THE GRENADINES', 'Saint Vincent and the Grenadines', 'VCT', 670);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VE', 'VENEZUELA', 'Venezuela', 'VEN', 862);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VG', 'VIRGIN ISLANDS, BRITISH', 'Virgin Islands, British', 'VGB', 92);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VI', 'VIRGIN ISLANDS, U.S.', 'Virgin Islands, U.s.', 'VIR', 850);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VN', 'VIET NAM', 'Viet Nam', 'VNM', 704);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('VU', 'VANUATU', 'Vanuatu', 'VUT', 548);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('WF', 'WALLIS AND FUTUNA', 'Wallis and Futuna', 'WLF', 876);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('WS', 'SAMOA', 'Samoa', 'WSM', 882);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('YE', 'YEMEN', 'Yemen', 'YEM', 887);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('YT', 'MAYOTTE', 'Mayotte', NULL, NULL);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ZA', 'SOUTH AFRICA', 'South Africa', 'ZAF', 710);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ZM', 'ZAMBIA', 'Zambia', 'ZMB', 894);
+INSERT INTO bf_countries (`iso`, `name`, `printable_name`, `iso3`, `numcode`) VALUES ('ZW', 'ZIMBABWE', 'Zimbabwe', 'ZWE', 716);
+
+
+#
+# TABLE STRUCTURE FOR: bf_email_queue
+#
+
+CREATE TABLE `bf_email_queue` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `to_email` varchar(128) NOT NULL,
+  `subject` varchar(255) NOT NULL,
+  `message` text NOT NULL,
+  `alt_message` text,
+  `max_attempts` int(11) NOT NULL DEFAULT '3',
+  `attempts` int(11) NOT NULL DEFAULT '0',
+  `success` tinyint(1) NOT NULL DEFAULT '0',
+  `date_published` datetime DEFAULT NULL,
+  `last_attempt` datetime DEFAULT NULL,
+  `date_sent` datetime DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=75 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (1, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2013-12-26 14:42:08<br /><br />- POST Data: <pre></pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 185', NULL, 3, 1, 0, NULL, '2013-12-26 14:43:31', NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (2, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2013-12-27 11:23:54<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1002790500\n    [shortcode] => 8008\n    [mo] => Tntest flower 7002\n    [msisdn] => 84904898158\n    [request_time] => 2013-12-27 11:23:18\n    [token] => 2efe6db99cce1c1e1befb663b5aca671\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (3, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2013-12-27 11:24:25<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1002790500\n    [shortcode] => 8008\n    [mo] => Tntest flower 7002\n    [msisdn] => 84904898158\n    [request_time] => 2013-12-27 11:23:54\n    [token] => b721b3a1f30c7d83ba0fa6cbc88893b5\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (4, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2013-12-28 09:56:54<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1002792778\n    [shortcode] => 8008\n    [mo] => Tntest flower 7002\n    [msisdn] => 84904898158\n    [request_time] => 2013-12-28 09:56:48\n    [token] => 162983b11a6291d97c93c244d61f7d0b\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (5, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 16:42:24<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292646\n    [shortcode] => 8008\n    [mo] => BVKG ngocmai\n\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 16:42:24\n    [token] => 5789c11bb417ff53aefb58a1e678f0ca\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (6, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:33:54<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:33:54\n    [token] => 0a3cf1cd6021bc8b11e95288f7985a73\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (7, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:33:55<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:33:55\n    [token] => 08109462012495a798f4de9cafce5a9c\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (8, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:35:30<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:35:30\n    [token] => b6eced2766d3ca8c41336c6b6ce787e2\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (9, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:35:36<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:35:30\n    [token] => b6eced2766d3ca8c41336c6b6ce787e2\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (10, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:36:22<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:36:21\n    [token] => 7e1d9bfee9c768f3fecd22e16b0a2587\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (11, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:36:22<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:36:22\n    [token] => 22b1cf63b8c60bcf31355ea0ae1cc642\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (12, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:38:07<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:38:06\n    [token] => 5dd24848846e0d9d80a0981363d0906f\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (13, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:38:07<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:38:07\n    [token] => 53a7618c7d81d1bd6563534cfc824c06\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (14, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:39:13<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:39:13\n    [token] => 84d12d89b536a278d2e4b00e59174fcb\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (15, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-03 17:39:14<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1101292673\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 841242337815\n    [request_time] => 2014-01-03 17:39:14\n    [token] => 6a26a5217535985cec74fb174c5f31fc\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (16, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://dev.api.sgen.vn/receivemo/smshub/recharge<br /><br />- Time: 2014-01-06 10:03:18<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1002811927\n    [shortcode] => 8008\n    [mo] => Snap ngocmai\n    [msisdn] => 84902139498\n    [request_time] => 2014-01-06 10:03:17\n    [token] => bc12cc9fb7d99d1f795d923ebd879635\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (17, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-06 10:12:17<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1711317702\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 84986045828\n    [request_time] => 2014-01-06 10:12:17\n    [token] => 8fcbeb4cfa47f148350212ceeebfae01\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 198', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (18, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-06 10:45:29<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1711318068\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 84986045828\n    [request_time] => 20140106104529\n    [token] => ab111b84774440cb92740dd45ca0aa76\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 202', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (19, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-06 10:51:53<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 1711318143\n    [shortcode] => 8008\n    [mo] => BVKG ngocmai\n    [msisdn] => 84986045828\n    [request_time] => 20140106105152\n    [token] => 46f553d616406c240151a000185a13be\n)\n</pre><br /><br />- File name: /var/www/html/smshub/application/modules/api/libraries/api_process.php   Line: 202', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (20, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2014-01-06 14:54:45<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456789\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106145445\n    [token] => 7ca4617c0a90cbeeb92cd5d1d3e38f0b\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (21, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2014-01-06 14:58:06<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456789\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106145805\n    [token] => 8a922427bac3fbb08d18b3d87df4d82a\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (22, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:04:09<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456777\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphangp03\n    [msisdn] => 84912345678\n    [request_time] => 20140106150408\n    [token] => 840f49d2d2d3784677c56c1dc759882a\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (23, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:05:06<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106150505\n    [token] => 4731e8dafdbbdf294edf5b38484428a5\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (24, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://gopaygate.sgen.vn:8443/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:06:07<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123458888\n    [shortcode] => 8008\n    [mo] => KGNAP hoahoet 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106150607\n    [token] => 1350c856e93c764f2b8f64c5e374ca72\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (25, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-06 15:22:12<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123888888\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106152212\n    [token] => a6cfd18ffce73d630ede4bc8e5b003ad\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (26, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: https://localhost/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:56:55<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 888888888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106155623\n    [token] => cd58c2cc7bd667d786fe7868f66738c2\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (27, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:58:19<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 898888888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106155819\n    [token] => f115513477cfd5417e6355ae11f77d72\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (28, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 15:59:23<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 78888888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106155922\n    [token] => 1f177c9db05276999f3201086696ac15\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (29, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:04:58<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 79888888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106160457\n    [token] => 43c91d4479ff693578d134af8261e63f\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (30, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:06:20<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 79988888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106160603\n    [token] => 42f232cf244367d51bc825331c1266a6\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (31, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:06:21<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 79988888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106160620\n    [token] => f0a76359f5e7b0f4f687100f3c56cd7b\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (32, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:06:26<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 79998888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106160625\n    [token] => 491baedde721173b7d6275a4076cb621\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (33, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:10:17<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 79999888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106161006\n    [token] => 98a4d14854ac7bbf39e0af1bd6b4f363\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (34, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:36:49<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 7986888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106163646\n    [token] => 7df5ef825d4c21fe1d50a49d552d39ce\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (35, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:37:43<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 997986888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106163741\n    [token] => d4db5644205538b2a2c1c75edc18daee\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (36, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-06 16:46:56<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 99116888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140106164656\n    [token] => 6f18775e0077533a3936d2b2dc576b43\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (37, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-06 17:21:00<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 909116888\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang3\n    [msisdn] => 84912345678\n    [request_time] => 20140106172029\n    [token] => 5e99632609ba240978791eb119b84621\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (38, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:22:27<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 989116888\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang3\n    [msisdn] => 84912345678\n    [request_time] => 20140106172137\n    [token] => 4d04fc1a4814d24c7cbeaf6aff143f1d\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (39, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:24:59<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 7777777\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang3\n    [msisdn] => 84912345678\n    [request_time] => 20140106172409\n    [token] => 51b940574492e2145bff218c680bd939\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (40, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:27:57<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999999\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang3\n    [msisdn] => 84912345678\n    [request_time] => 20140106172757\n    [token] => 9ef599f423a94e92cf9b9d452c5deb24\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (41, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:32:34<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999987\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106173234\n    [token] => d984ebaf7e4649294769760d69a91e7f\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (42, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:33:16<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999956\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106173315\n    [token] => a2dad49478560598be8056c94351b0d6\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (43, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:36:53<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999789\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106173653\n    [token] => 2bbb7de8da9eff18c784cdeeb892b48a\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (44, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:38:25<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 8693214\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106173825\n    [token] => 272a6fa4d06245b68d73455a0b31e321\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (45, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:39:26<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 86937712\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106173926\n    [token] => 33bf146ac084554e77a157cfdef792b1\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (46, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:40:04<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 86937789\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106174004\n    [token] => 385adbb29f8725174c605f423c3e9250\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (47, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:44:27<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 869377110\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106174427\n    [token] => 481c984e5a16a2d24da98b7e72e63675\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (48, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-06 17:46:11<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 869377889\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140106174610\n    [token] => 2ae02b7cd60b4b3499ea4c77127d1daa\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (49, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 13:47:44<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456321\n    [shortcode] => 8008\n    [mo] => KGMK hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140107134742\n    [token] => 2e6699c0ea568fc49e7bc4e00551a403\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (50, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 13:56:12<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456333\n    [shortcode] => 8008\n    [mo] => KGMK\n    [msisdn] => 84912345678\n    [request_time] => 20140107135612\n    [token] => 4f69562a4f92580c9bbc9fb2891ef1e0\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (51, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://gamesms.thinknet.vn:8686/smshub<br /><br />- Time: 2014-01-07 14:24:58<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456471\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107142427\n    [token] => e776a0ee358ab35acc4131ef570b503c\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (52, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:26:17<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456471\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 84912345678\n    [request_time] => 20140107142617\n    [token] => 4998d327f01482a7157384bc51d80bc3\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (53, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:43:21<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 774567451\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107144320\n    [token] => 9a93c55e8fea2871310ed62854172340\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (54, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:43:51<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77457851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107144351\n    [token] => d2cf3712b0799f40429df1cbca746f18\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (55, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:45:14<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 99457851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107144514\n    [token] => 2e7d2f8d807cda6e36cff12ca99d7fe3\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (56, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:45:51<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 75257851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107144550\n    [token] => 0455b3b13fc7cced975c020bbc4ab3e7\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (57, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:48:49<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 05257851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107144848\n    [token] => d6175fbe1df5a1528e6483f836277c1f\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (58, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:49:13<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 7715257851\n    [shortcode] => 8008\n    [mo] => KGMK\n    [msisdn] => 84912345678\n    [request_time] => 20140107144913\n    [token] => bfbb5f34c855de317307de0561492e03\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (59, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 14:56:11<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140107145611\n    [token] => deae82c2925093d386feeab4a573d961\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 204', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (60, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 16:34:20<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC namtuoc0202\n    [msisdn] => 84912345678\n    [request_time] => 20140107163419\n    [token] => bbc826ab807c76e1468a167eefd1fca5\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (61, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 16:35:13<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC namtuoc0202\n    [msisdn] => 84912345678\n    [request_time] => 20140107163513\n    [token] => 19ded04faee4e6871b82b0bd80d8c2bc\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (62, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 16:35:45<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC namtuoc0202\n    [msisdn] => 84912345678\n    [request_time] => 20140107163545\n    [token] => 0744979a9cb4b01a4940d3c01fc7674c\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (63, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-07 16:36:08<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 7852057851\n    [shortcode] => 8008\n    [mo] => KG namtuoc0202\n    [msisdn] => 84912345678\n    [request_time] => 20140107163607\n    [token] => a913161ce0eb9b13a91ce992282fb5c1\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (64, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-08 09:25:18<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456789\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108092512\n    [token] => 1c51fc0ffe9182a982ca8ce12661cb89\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (65, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-08 09:25:19<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456789\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108092519\n    [token] => 9853216e810b4a3e162f493807ece6c2\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (66, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-08 09:25:29<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456789\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108092526\n    [token] => ddda83162ad621d51d1c062d1082e810\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (67, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 09:48:02<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456471\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 84912345678\n    [request_time] => 20140108094759\n    [token] => 1fd3f10bf1b739a760655bca792eb45c\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (68, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 09:48:04<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 77456471\n    [shortcode] => 8008\n    [mo] => KG\n    [msisdn] => 84912345678\n    [request_time] => 20140108094804\n    [token] => 9eb6b5d517133db08c34b22149d28a48\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (69, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 09:48:48<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140108094848\n    [token] => 0ee54ab39011c2d399da236cab5425fa\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (70, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 09:48:49<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 002057851\n    [shortcode] => 8008\n    [mo] => KGGC\n    [msisdn] => 84912345678\n    [request_time] => 20140108094849\n    [token] => 09fd138e9aef2456bfe51d9edbf39c6d\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (71, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 10:17:06<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999999\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108101706\n    [token] => 4c5462f53224638f15d99e9ea58ce77e\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (72, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 10:17:07<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999999\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108101706\n    [token] => 4c5462f53224638f15d99e9ea58ce77e\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (73, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/game-sms/smshub<br /><br />- Time: 2014-01-08 10:17:07<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 999999\n    [shortcode] => 8008\n    [mo] => BVKG hoaphang\n    [msisdn] => 84912345678\n    [request_time] => 20140108101707\n    [token] => 6973812affba57079fbd5761982a4bdb\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+INSERT INTO bf_email_queue (`id`, `to_email`, `subject`, `message`, `alt_message`, `max_attempts`, `attempts`, `success`, `date_published`, `last_attempt`, `date_sent`) VALUES (74, 'hanhdt@thinknet.vn', 'SMSHUB Proccess api unsuccessful', '- Proccess api can not respone result with url: http://localhost/gopay/api/receivemo/smshub<br /><br />- Time: 2014-01-08 10:24:59<br /><br />- POST Data: <pre>Array\n(\n    [transaction_id] => 123456888\n    [shortcode] => 8008\n    [mo] => KGNAP hoaphang 7003\n    [msisdn] => 84912345678\n    [request_time] => 20140108102458\n    [token] => d0386c912857b9a563912ac3bf0d3825\n)\n</pre><br /><br />- File name: E:\\xampp\\htdocs\\smshub\\application\\modules\\api\\libraries\\api_process.php   Line: 203', NULL, 3, 0, 0, NULL, NULL, NULL);
+
+
+#
+# TABLE STRUCTURE FOR: bf_login_attempts
+#
+
+CREATE TABLE `bf_login_attempts` (
+  `id` bigint(20) NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(40) NOT NULL,
+  `login` varchar(50) NOT NULL,
+  `time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+#
+# TABLE STRUCTURE FOR: bf_permissions
+#
+
+CREATE TABLE `bf_permissions` (
+  `permission_id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  `status` enum('active','inactive','deleted') NOT NULL DEFAULT 'active',
+  PRIMARY KEY (`permission_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=144 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (2, 'Site.Content.View', 'Allow users to view the Content Context', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (3, 'Site.Reports.View', 'Allow users to view the Reports Context', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (4, 'Site.Settings.View', 'Allow users to view the Settings Context', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (5, 'Site.Developer.View', 'Allow users to view the Developer Context', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (6, 'Bonfire.Roles.Manage', 'Allow users to manage the user Roles', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (7, 'Bonfire.Users.Manage', 'Allow users to manage the site Users', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (8, 'Bonfire.Users.View', 'Allow users access to the User Settings', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (9, 'Bonfire.Users.Add', 'Allow users to add new Users', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (10, 'Bonfire.Database.Manage', 'Allow users to manage the Database settings', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (11, 'Bonfire.Emailer.Manage', 'Allow users to manage the Emailer settings', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (12, 'Bonfire.Logs.View', 'Allow users access to the Log details', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (13, 'Bonfire.Logs.Manage', 'Allow users to manage the Log files', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (14, 'Bonfire.Emailer.View', 'Allow users access to the Emailer settings', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (15, 'Site.Signin.Offline', 'Allow users to login to the site when the site is offline', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (16, 'Bonfire.Permissions.View', 'Allow access to view the Permissions menu unders Settings Context', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (17, 'Bonfire.Permissions.Manage', 'Allow access to manage the Permissions in the system', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (18, 'Bonfire.Roles.Delete', 'Allow users to delete user Roles', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (19, 'Bonfire.Modules.Add', 'Allow creation of modules with the builder.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (20, 'Bonfire.Modules.Delete', 'Allow deletion of modules.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (21, 'Permissions.Administrator.Manage', 'To manage the access control permissions for the Administrator role.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (22, 'Permissions.Editor.Manage', 'To manage the access control permissions for the Editor role.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (24, 'Permissions.User.Manage', 'To manage the access control permissions for the User role.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (25, 'Permissions.Developer.Manage', 'To manage the access control permissions for the Developer role.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (27, 'Activities.Own.View', 'To view the users own activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (28, 'Activities.Own.Delete', 'To delete the users own activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (29, 'Activities.User.View', 'To view the user activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (30, 'Activities.User.Delete', 'To delete the user activity logs, except own', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (31, 'Activities.Module.View', 'To view the module activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (32, 'Activities.Module.Delete', 'To delete the module activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (33, 'Activities.Date.View', 'To view the users own activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (34, 'Activities.Date.Delete', 'To delete the dated activity logs', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (35, 'Bonfire.UI.Manage', 'Manage the Bonfire UI settings', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (36, 'Bonfire.Settings.View', 'To view the site settings page.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (37, 'Bonfire.Settings.Manage', 'To manage the site settings.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (38, 'Bonfire.Activities.View', 'To view the Activities menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (39, 'Bonfire.Database.View', 'To view the Database menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (40, 'Bonfire.Migrations.View', 'To view the Migrations menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (41, 'Bonfire.Builder.View', 'To view the Modulebuilder menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (42, 'Bonfire.Roles.View', 'To view the Roles menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (43, 'Bonfire.Sysinfo.View', 'To view the System Information page.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (44, 'Bonfire.Translate.Manage', 'To manage the Language Translation.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (45, 'Bonfire.Translate.View', 'To view the Language Translate menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (46, 'Bonfire.UI.View', 'To view the UI/Keyboard Shortcut menu.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (49, 'Bonfire.Profiler.View', 'To view the Console Profiler Bar.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (50, 'Bonfire.Roles.Add', 'To add New Roles', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (120, 'Site_settings.Settings.View', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (121, 'Site_settings.Settings.Create', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (122, 'Site_settings.Settings.Edit', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (123, 'Site_settings.Settings.Delete', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (126, 'Books.Content.View', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (127, 'Books.Content.Create', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (128, 'Books.Content.Edit', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (129, 'Books.Content.Delete', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (130, 'Category.Content.View', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (131, 'Category.Content.Create', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (132, 'Category.Content.Edit', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (133, 'Category.Content.Delete', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (134, 'Permissions.Author.Manage', 'To manage the access control permissions for the Author role.', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (135, 'Search_Tool.Content.View', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (140, 'Collections.Content.View', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (141, 'Collections.Content.Create', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (142, 'Collections.Content.Edit', '', 'active');
+INSERT INTO bf_permissions (`permission_id`, `name`, `description`, `status`) VALUES (143, 'Collections.Content.Delete', '', 'active');
+
+
+#
+# TABLE STRUCTURE FOR: bf_role_permissions
+#
+
+CREATE TABLE `bf_role_permissions` (
+  `role_id` int(11) NOT NULL,
+  `permission_id` int(11) NOT NULL,
+  PRIMARY KEY (`role_id`,`permission_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 2);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 3);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 4);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 5);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 6);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 7);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 8);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 9);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 10);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 11);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 12);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 13);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 14);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 15);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 16);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 17);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 18);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 19);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 20);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 21);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 22);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 24);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 25);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 27);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 28);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 29);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 30);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 31);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 32);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 33);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 34);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 35);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 36);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 37);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 38);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 39);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 40);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 41);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 42);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 43);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 44);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 45);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 46);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 49);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 50);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 120);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 121);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 122);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 123);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 126);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 127);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 128);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 129);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 130);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 131);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 132);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 133);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 134);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 135);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 140);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 141);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 142);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (1, 143);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (2, 2);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (2, 3);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 2);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 126);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 127);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 128);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 129);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 130);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 131);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 132);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 133);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 135);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (4, 140);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 2);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 3);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 4);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 5);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 6);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 7);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 8);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 9);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 10);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 11);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 12);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 13);
+INSERT INTO bf_role_permissions (`role_id`, `permission_id`) VALUES (6, 49);
+
+
+#
+# TABLE STRUCTURE FOR: bf_roles
+#
+
+CREATE TABLE `bf_roles` (
+  `role_id` int(11) NOT NULL AUTO_INCREMENT,
+  `role_name` varchar(60) NOT NULL,
+  `description` varchar(255) DEFAULT NULL,
+  `default` tinyint(1) NOT NULL DEFAULT '0',
+  `can_delete` tinyint(1) NOT NULL DEFAULT '1',
+  `login_destination` varchar(255) NOT NULL DEFAULT '/',
+  `deleted` int(1) NOT NULL DEFAULT '0',
+  `default_context` varchar(255) NOT NULL DEFAULT 'content',
+  PRIMARY KEY (`role_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_roles (`role_id`, `role_name`, `description`, `default`, `can_delete`, `login_destination`, `deleted`, `default_context`) VALUES (1, 'Administrator', 'Has full control over every aspect of the site.', 0, 0, '', 0, 'content');
+INSERT INTO bf_roles (`role_id`, `role_name`, `description`, `default`, `can_delete`, `login_destination`, `deleted`, `default_context`) VALUES (2, 'Editor', 'Can handle day-to-day management, but does not have full power.', 0, 1, '', 0, 'content');
+INSERT INTO bf_roles (`role_id`, `role_name`, `description`, `default`, `can_delete`, `login_destination`, `deleted`, `default_context`) VALUES (4, 'User', 'This is the default user with access to login.', 1, 0, '', 0, 'content');
+INSERT INTO bf_roles (`role_id`, `role_name`, `description`, `default`, `can_delete`, `login_destination`, `deleted`, `default_context`) VALUES (6, 'Developer', 'Developers typically are the only ones that can access the developer tools. Otherwise identical to Administrators, at least until the site is handed off.', 0, 1, '', 0, 'content');
+INSERT INTO bf_roles (`role_id`, `role_name`, `description`, `default`, `can_delete`, `login_destination`, `deleted`, `default_context`) VALUES (7, 'Author', 'Tác giả', 0, 1, 'admin/content', 0, 'content');
+
+
+#
+# TABLE STRUCTURE FOR: bf_schema_version
+#
+
+CREATE TABLE `bf_schema_version` (
+  `type` varchar(40) NOT NULL,
+  `version` int(4) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`type`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('books_', 1);
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('category_', 1);
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('collections_', 1);
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('core', 37);
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('search_tool_', 1);
+INSERT INTO bf_schema_version (`type`, `version`) VALUES ('site_settings_', 1);
+
+
+#
+# TABLE STRUCTURE FOR: bf_sessions
+#
+
+CREATE TABLE `bf_sessions` (
+  `session_id` varchar(40) NOT NULL DEFAULT '0',
+  `ip_address` varchar(45) NOT NULL DEFAULT '0',
+  `user_agent` varchar(120) NOT NULL,
+  `last_activity` int(10) unsigned NOT NULL DEFAULT '0',
+  `user_data` text NOT NULL,
+  PRIMARY KEY (`session_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+#
+# TABLE STRUCTURE FOR: bf_settings
+#
+
+CREATE TABLE `bf_settings` (
+  `name` varchar(250) NOT NULL,
+  `module` varchar(50) NOT NULL,
+  `value` varchar(255) NOT NULL,
+  PRIMARY KEY (`name`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('api.log_level', 'site_settings', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.allow_name_change', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.allow_register', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.allow_remember', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.do_login_redirect', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.login_type', 'core', 'both');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.name_change_frequency', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.name_change_limit', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.password_force_mixed_case', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.password_force_numbers', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.password_force_symbols', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.password_min_length', 'core', '8');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.password_show_labels', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.remember_length', 'core', '2592000');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.user_activation_method', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.use_extended_profile', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('auth.use_usernames', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('ext.country', 'core', 'US');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('ext.state', 'core', 'CA');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('ext.street_name', 'core', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('ext.type', 'core', 'small');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('form_save', 'core.ui', 'ctrl+s/⌘+s');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('general_settings.default_distributor', 'site_settings', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('general_settings.errors_report_to', 'site_settings', 'hanhdt@thinknet.vn');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('goto_content', 'core.ui', 'alt+c');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('mailpath', 'email', '/usr/sbin/sendmail');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('mailtype', 'email', 'text');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('password_iterations', 'users', '8');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('protocol', 'email', 'mail');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('revenue.realtime', 'site_settings', '60');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('sender_email', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.languages', 'core', 'a:2:{i:0;s:7:\"english\";i:1;s:10:\"vietnamese\";}');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.list_limit', 'core', '25');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.show_front_profiler', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.show_profiler', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.status', 'core', '1');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.system_email', 'core', 'admin@mybonfire.com');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('site.title', 'core', 'Connect Data');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('smtp_host', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('smtp_pass', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('smtp_port', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('smtp_timeout', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('smtp_user', 'email', '');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('updates.bleeding_edge', 'core', '0');
+INSERT INTO bf_settings (`name`, `module`, `value`) VALUES ('updates.do_check', 'core', '0');
+
+
+#
+# TABLE STRUCTURE FOR: bf_states
+#
+
+CREATE TABLE `bf_states` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` char(40) NOT NULL,
+  `abbrev` char(2) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=64 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (1, 'Alaska', 'AK');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (2, 'Alabama', 'AL');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (3, 'American Samoa', 'AS');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (4, 'Arizona', 'AZ');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (5, 'Arkansas', 'AR');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (6, 'California', 'CA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (7, 'Colorado', 'CO');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (8, 'Connecticut', 'CT');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (9, 'Delaware', 'DE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (10, 'District of Columbia', 'DC');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (11, 'Florida', 'FL');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (12, 'Georgia', 'GA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (13, 'Guam', 'GU');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (14, 'Hawaii', 'HI');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (15, 'Idaho', 'ID');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (16, 'Illinois', 'IL');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (17, 'Indiana', 'IN');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (18, 'Iowa', 'IA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (19, 'Kansas', 'KS');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (20, 'Kentucky', 'KY');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (21, 'Louisiana', 'LA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (22, 'Maine', 'ME');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (23, 'Marshall Islands', 'MH');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (24, 'Maryland', 'MD');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (25, 'Massachusetts', 'MA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (26, 'Michigan', 'MI');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (27, 'Minnesota', 'MN');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (28, 'Mississippi', 'MS');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (29, 'Missouri', 'MO');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (30, 'Montana', 'MT');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (31, 'Nebraska', 'NE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (32, 'Nevada', 'NV');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (33, 'New Hampshire', 'NH');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (34, 'New Jersey', 'NJ');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (35, 'New Mexico', 'NM');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (36, 'New York', 'NY');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (37, 'North Carolina', 'NC');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (38, 'North Dakota', 'ND');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (39, 'Northern Mariana Islands', 'MP');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (40, 'Ohio', 'OH');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (41, 'Oklahoma', 'OK');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (42, 'Oregon', 'OR');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (43, 'Palau', 'PW');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (44, 'Pennsylvania', 'PA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (45, 'Puerto Rico', 'PR');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (46, 'Rhode Island', 'RI');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (47, 'South Carolina', 'SC');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (48, 'South Dakota', 'SD');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (49, 'Tennessee', 'TN');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (50, 'Texas', 'TX');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (51, 'Utah', 'UT');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (52, 'Vermont', 'VT');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (53, 'Virgin Islands', 'VI');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (54, 'Virginia', 'VA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (55, 'Washington', 'WA');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (56, 'West Virginia', 'WV');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (57, 'Wisconsin', 'WI');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (58, 'Wyoming', 'WY');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (59, 'Armed Forces Africa', 'AE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (60, 'Armed Forces Canada', 'AE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (61, 'Armed Forces Europe', 'AE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (62, 'Armed Forces Middle East', 'AE');
+INSERT INTO bf_states (`id`, `name`, `abbrev`) VALUES (63, 'Armed Forces Pacific', 'AP');
+
+
+#
+# TABLE STRUCTURE FOR: bf_telcos
+#
+
+CREATE TABLE `bf_telcos` (
+  `telco_id` tinyint(3) unsigned NOT NULL AUTO_INCREMENT,
+  `telco_name` varchar(50) NOT NULL,
+  `prefixs` varchar(255) NOT NULL COMMENT 'Multi values separator by |',
+  PRIMARY KEY (`telco_id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_telcos (`telco_id`, `telco_name`, `prefixs`) VALUES (1, 'VNP', '8491|8494|84123|84124|84125|84127|84129');
+INSERT INTO bf_telcos (`telco_id`, `telco_name`, `prefixs`) VALUES (2, 'VMS', '8490|8493|84120|84121|84122|84126|84128');
+INSERT INTO bf_telcos (`telco_id`, `telco_name`, `prefixs`) VALUES (3, 'VTM', '8497|8498|8416|8496');
+INSERT INTO bf_telcos (`telco_id`, `telco_name`, `prefixs`) VALUES (4, 'VNM', '8492|84186|84188');
+INSERT INTO bf_telcos (`telco_id`, `telco_name`, `prefixs`) VALUES (5, 'Beeline', '8499|84199');
+
+
+#
+# TABLE STRUCTURE FOR: bf_user_cookies
+#
+
+CREATE TABLE `bf_user_cookies` (
+  `user_id` bigint(20) NOT NULL,
+  `token` varchar(128) NOT NULL,
+  `created_on` datetime NOT NULL,
+  KEY `token` (`token`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (1, 'x1MsdQbztJ6OSWQ9q0Eb7ZeMkjOonV1dFL5J9rH9Pk1fnzQHAJ50r42SvlOq5sWabrTL2A6fiklsHtckw69bdzvYJHIVvtZoV7uzI80n3hOE0Idaib9qdTdWbuou9qrl', '2013-12-19 10:01:17');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (1, 'DHZ57Vs3LNAzhfIf4Fk2TGJDaR80dMZYz8dsZTYBjCadhPSApkPH3uTniJ6fGVCYs6gDM5BW8z51UBolTjQc7u3wj3G1vc1mxl70pYtuegIxcVtJMJLSSdCvRnbBUgE4', '2013-12-21 10:00:08');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (1, 'pN4CdiB0ys9nfxqwR04Z4OBWm5AjTml9IIkev3SB66CoTJZBig2uL7gqgvT5EOrtCCrd8rRtEk2EVPGL3LrvFPWefWwGNJN2KWy9AqS95PtiRfVKWVFDp3X69Zcvtksn', '2013-12-25 09:25:45');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (2, 'jhSIivQGOlOp3vnuu5EFxu4kNLpMWHMjBHjlsZDtlR2P5nHHfsLXzD1eVPySEZhGqT6wNudr3c86VHLWPTgxM2dxnLmrUOVxeE6i3MApvPAYHrGGo5UvNxhbBrROPwH3', '2013-12-30 18:58:58');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (1, '7Fy9xmrtVhV1umbUgnilomgMCXj3HJXZEYDoZtjyeGpPdUAIUqc6oyEnUBn3PSdNB2Fy0fdhg2UmoEF1RMH723hU8Xhdf8Ncd1nETZqbUbnNPgq1m34b7mlknutX0gb8', '2014-01-06 13:34:46');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'PYAFAluqTUCGGvvE1nO37pBUruM6m1hrZ9yxMXKDpzTWAWPetNWbVEMIHyhvjsN3YDd1H7BLwWNtNtekVJif1kAZcNNNSbXOsEQnyEfZfo7hOiv30UIQv3GEQtmyaHjq', '2014-01-02 13:36:09');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'nHtfRUdv1tciKLGzwjFRF4Arffm7Xx8GSUvfDoqY6LKuYMG50rjWsgeH9UpNDfXorgJPDl2CYUvtqST8WTG8tGYAMX0SPBKIaiLMGJ8ycXwuaqYLWQdAecNnTUNErnmC', '2014-01-06 09:48:50');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'ZR0gR6zSE4I0qTOp6Okbn4KRQnYP8xfWAUFnGDgeSX4ScCoddqH86U79y0Yu1509k8pOUoMJrGp8metdEDgmavURU1SVIfMYaCo2L6tqG92KDwy36uvn33cwJIdXJpgf', '2014-02-17 11:34:06');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'LIMSxx3IH2gqSWVMjFkns6K5IMO7fwThIkUZl8XibZR98tEU5J7VgMgJuOEkRdKV9guk7YZzJHlMR5prIR5VLXy01HOM7siJKDaEbf3w9IijyxyGTe8D7MF0ONCEWSy2', '2014-07-16 13:58:16');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'x5sObvukzVqUK2hWaQhLrvPwuDByBDcPN1oohunVxva5s501s7lwUGxhAdgiGu3XeqShbO5RCjC0Mw68NmH3cQVStW2tGqv5XJ5YTrDmdDlyYp9hL18Ke25aU0sbDNvY', '2014-07-17 09:50:23');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'F9TMe3cKXdyzET3efNtv7lgvbjNgJ3lSJfduxObpKn7bcyUZxTgjzpgpUo8ZJlOTkYr1B96jC4amtt95MRA5zm653ZzzNdFNBH2BpqwtzmbZVFYxYvqXCFYIkUDCXqvA', '2014-09-26 20:55:44');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'U0RzNE79tpGBSflwVZXeQcA4bYdodH9t69Negcb8mObvNEppcE8Gi3KaJXAA8nUIQJs6jTPIuAzR8FOwnTm3DpWQdwSw91pVFphvaOgjQHAWm1VBUbtQljVA0tu32rCh', '2014-11-03 22:40:10');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (3, 'iU7TDqLt7aqOqJTAeq4BZb6AGxg00wnsJfMIXlmY9ULSvKtSYyzEEWiPv9EYEYcx1XRX411H58Gxi9Cp2KWP15kaHmvfnHZ0dEeIP3WtCM6lyKB8bwfvqpggASwCY2hR', '2015-03-30 09:13:37');
+INSERT INTO bf_user_cookies (`user_id`, `token`, `created_on`) VALUES (2, 'QssugXpWk783iAamyiCmapRZa9HYnlvofSlSKD3KGvQFqvAEdlG5hlVbfX96zUu4mQ2T1DGxpPIAJCpNW3fxPY6q4g5yxVzc3qKVyZbXwQuV9NThY4vcyDVNXaNbb4lk', '2015-08-13 16:17:34');
+
+
+#
+# TABLE STRUCTURE FOR: bf_user_meta
+#
+
+CREATE TABLE `bf_user_meta` (
+  `meta_id` int(20) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(20) unsigned NOT NULL DEFAULT '0',
+  `meta_key` varchar(255) NOT NULL DEFAULT '',
+  `meta_value` text,
+  PRIMARY KEY (`meta_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=17 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (1, 1, 'street_name', '');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (2, 1, 'state', 'SC');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (3, 1, 'country', 'VN');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (4, 1, 'type', 'small');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (5, 2, 'street_name', '');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (6, 2, 'state', 'SC');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (7, 2, 'country', 'US');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (8, 2, 'type', 'small');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (9, 3, 'street_name', '');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (10, 3, 'state', 'SC');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (11, 3, 'country', 'VN');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (12, 3, 'type', 'small');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (13, 4, 'street_name', '');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (14, 4, 'state', 'SC');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (15, 4, 'country', 'US');
+INSERT INTO bf_user_meta (`meta_id`, `user_id`, `meta_key`, `meta_value`) VALUES (16, 4, 'type', 'small');
+
+
+#
+# TABLE STRUCTURE FOR: bf_users
+#
+
+CREATE TABLE `bf_users` (
+  `id` bigint(20) unsigned NOT NULL AUTO_INCREMENT,
+  `role_id` int(11) NOT NULL DEFAULT '4',
+  `email` varchar(120) NOT NULL,
+  `username` varchar(30) NOT NULL DEFAULT '',
+  `password_hash` char(60) NOT NULL,
+  `reset_hash` varchar(40) DEFAULT NULL,
+  `last_login` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `last_ip` varchar(40) NOT NULL DEFAULT '',
+  `created_on` datetime NOT NULL DEFAULT '0000-00-00 00:00:00',
+  `deleted` tinyint(1) NOT NULL DEFAULT '0',
+  `reset_by` int(10) DEFAULT NULL,
+  `banned` tinyint(1) NOT NULL DEFAULT '0',
+  `ban_message` varchar(255) DEFAULT NULL,
+  `display_name` varchar(255) DEFAULT '',
+  `display_name_changed` date DEFAULT NULL,
+  `timezone` char(4) NOT NULL DEFAULT 'UM6',
+  `language` varchar(20) NOT NULL DEFAULT 'english',
+  `active` tinyint(1) NOT NULL DEFAULT '0',
+  `activate_hash` varchar(40) NOT NULL DEFAULT '',
+  `password_iterations` int(4) NOT NULL,
+  `force_password_reset` tinyint(1) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`id`),
+  KEY `email` (`email`)
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+
+INSERT INTO bf_users (`id`, `role_id`, `email`, `username`, `password_hash`, `reset_hash`, `last_login`, `last_ip`, `created_on`, `deleted`, `reset_by`, `banned`, `ban_message`, `display_name`, `display_name_changed`, `timezone`, `language`, `active`, `activate_hash`, `password_iterations`, `force_password_reset`) VALUES (1, 1, 'hanhdt@thinknet.vn', 'hanhdt', '$2a$08$LY.2XGkRis2H5UWdsR1OC.G/gMZDwtbJVikFvtZfyhcZNU3jIE1Ae', '', '2013-12-31 15:34:27', '14.160.50.242', '2013-12-10 09:39:46', 1, 0, 0, NULL, 'hanhdt', NULL, 'UM6', 'vietnamese', 1, '', 8, 0);
+INSERT INTO bf_users (`id`, `role_id`, `email`, `username`, `password_hash`, `reset_hash`, `last_login`, `last_ip`, `created_on`, `deleted`, `reset_by`, `banned`, `ban_message`, `display_name`, `display_name_changed`, `timezone`, `language`, `active`, `activate_hash`, `password_iterations`, `force_password_reset`) VALUES (2, 1, 'admin@thinknet.vn', 'admin', '$2a$08$oGH0aNFBI0HRcEul.jzbkeyKOttyHwu9XvzMjzjafwnyYpGbGaBVq', NULL, '2015-08-13 16:17:34', '::1', '2013-12-10 09:40:38', 0, NULL, 0, NULL, 'admin', NULL, 'UM6', 'vietnamese', 1, '', 8, 0);
+INSERT INTO bf_users (`id`, `role_id`, `email`, `username`, `password_hash`, `reset_hash`, `last_login`, `last_ip`, `created_on`, `deleted`, `reset_by`, `banned`, `ban_message`, `display_name`, `display_name_changed`, `timezone`, `language`, `active`, `activate_hash`, `password_iterations`, `force_password_reset`) VALUES (3, 1, 'tienhm@thinknet.vn', 'tienhm', '$2a$08$oGH0aNFBI0HRcEul.jzbkeyKOttyHwu9XvzMjzjafwnyYpGbGaBVq', '', '2015-03-30 08:35:58', '::1', '2013-12-31 13:24:14', 0, 0, 0, NULL, 'Hoàng Mạnh Tiến', NULL, 'UP7', 'vietnamese', 1, '', 8, 0);
+INSERT INTO bf_users (`id`, `role_id`, `email`, `username`, `password_hash`, `reset_hash`, `last_login`, `last_ip`, `created_on`, `deleted`, `reset_by`, `banned`, `ban_message`, `display_name`, `display_name_changed`, `timezone`, `language`, `active`, `activate_hash`, `password_iterations`, `force_password_reset`) VALUES (4, 4, 'learner1@gmail.com', 'learner1', '$2a$08$eUw2TZv3zLld5TBbo.0S7.49IuMJ1OE0PqwowulWv5h5xafruIWgq', NULL, '2015-07-19 09:22:40', '::1', '2015-07-19 09:21:20', 0, NULL, 0, NULL, 'learner1', NULL, 'UM6', 'vietnamese', 1, '', 8, 0);
+
+

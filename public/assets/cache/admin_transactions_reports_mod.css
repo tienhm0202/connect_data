@@ -1,0 +1,8 @@
+.fix-width{
+    max-width:150px !IMPORTANT;
+}
+ .dl-horizontal > dd:after {
+    display: table;
+    content: "";
+    clear: both;
+  }
