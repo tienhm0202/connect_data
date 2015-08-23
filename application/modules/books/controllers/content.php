@@ -103,7 +103,7 @@ class content extends Admin_Controller
                 log_activity($this->current_user->id, lang('books_act_create_record') . ': ' . $insert_id . ' : ' . $this->input->ip_address(), 'books');
 
                 Template::set_message(lang('books_create_success'), 'success');
-                redirect(SITE_AREA . '/content/books/choose/' . $insert_id);
+                redirect(SITE_AREA . '/content/books/compose/' . $insert_id);
             } else {
                 Template::set_message(lang('books_create_failure') . $this->books_model->error, 'error');
             }
@@ -179,8 +179,10 @@ class content extends Admin_Controller
             redirect(SITE_AREA . '/content/books');
         }
 
-        if ($this->input->post("doc_type")){
-            redirect(SITE_AREA . '/content/books/compose/' . $id . '/' .$this->input->post("doc_type"));
+        if ($this->input->post()) {
+            $content_id = $this->create_new_content();
+            $this->books_model->add_content_to_book($id, $content_id);
+            redirect(SITE_AREA . '/content/books/compose/' . $id . '/' . $content_id);
         }
 
         Template::set('toolbar_title', "Chọn kiểu tài liệu");
@@ -190,8 +192,8 @@ class content extends Admin_Controller
 
     public function compose()
     {
+        $this->load->helper('book');
         $id = $this->uri->segment(5);
-        $type = $this->uri->segment(6);
         if (empty($id)) {
             Template::set_message(lang('books_invalid_id'), 'error');
             redirect(SITE_AREA . '/content/books');
@@ -200,7 +202,7 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
-        Assets::add_js(Template::theme_url('js/tiny_mce/jquery.tinymce.js'));
+
         if ($this->input->post()) {
             if ($this->input->post('upload')) {
                 $config['upload_path'] = 'assets/books/';
@@ -209,14 +211,11 @@ class content extends Admin_Controller
 
                 $this->load->library('upload', $config);
 
-                if ( ! $this->upload->do_upload())
-                {
+                if (!$this->upload->do_upload()) {
                     Template::set_message($this->upload->display_errors(), 'error');
-                }
-                else
-                {
+                } else {
                     $data = $this->upload->data();
-                    $update_data["filename"] = 'assets/books/'. $data["file_name"];
+                    $update_data["filename"] = 'assets/books/' . $data["file_name"];
                     $update_data["file_type"] = str_replace(".", "", $data["file_ext"]);
                     $this->books_model->update($id, $update_data);
                     print $this->db->last_query();
@@ -236,10 +235,19 @@ class content extends Admin_Controller
             $content = $this->books_model->get_content($id);
         }
 
-        Assets::add_js($this->load->view('content/js', null, true), 'inline');
+        $content_id = $this->uri->segment(6) ? $this->uri->segment(6) : $content[0]["id"];
+        $file_content = $this->books_model->get_content_file($content_id);
+
+        Assets::add_js(Template::theme_url('js/tiny_mce/jquery.tinymce.js'));
+        Assets::add_js(Template::theme_url('js/tiny_mce/tiny_mce.js'));
+        Assets::add_module_js('books', 'pdf_reader.js');
+        Assets::add_module_js('books', 'init_reader.js');
+        Assets::add_module_css('books', 'books.css');
+        Template::set("book_id", $id);
         Template::set('book_content', $content);
-        Template::set('book_type', $type);
+        Template::set('selected_content', $content_id);
         Template::set('toolbar_title', lang('books_manage'));
+        Template::set('file_content', $file_content);
         Template::render();
 
     }
@@ -376,7 +384,6 @@ class content extends Admin_Controller
         $data['category_id'] = $this->input->post('books_category_id');
         $data['description'] = $this->input->post('description');
         $data['title'] = $this->input->post('books_title');
-        $data['filename'] = 'assets/books/' . md5($this->input->post('books_title') . time()) . '.html';
         $data['published'] = $this->input->post('books_published');
         $data['tag'] = $this->input->post('books_tag');
 
@@ -399,4 +406,38 @@ class content extends Admin_Controller
 
     //--------------------------------------------------------------------
 
+    private function create_new_content(){
+        if ($this->input->post()) {
+            if ($this->input->post('userfile')) {
+                $config['upload_path'] = 'assets/books/';
+                $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
+                $config['encrypt_name'] = true;
+
+                $this->load->library('upload', $config);
+
+                if (!$this->upload->do_upload()) {
+                    Template::set_message($this->upload->display_errors(), 'error');
+                } else {
+                    $data = $this->upload->data();
+                    $filename = 'assets/books/' . $data['file_name'];
+                    $update_data["filename"] = $filename;
+                    $update_data["header"] = $this->input->post('header');
+                    $update_data["file_type"] = str_replace(".", "", $data["file_ext"]);
+                    Template::set_message("Tải tệp thành công.", "success");
+                    return $this->books_model->put_content($update_data);
+                }
+
+            } else {
+                $content = $this->input->post('content', true);
+                $filename = 'assets/books/' . md5($this->input->post('header') . time()) . '.html';
+                if ($filename)
+                    file_put_contents($filename, $content);
+                $update_data["filename"] = $filename;
+                $update_data["file_type"] = 'html';
+                $update_data["header"] = $this->input->post('header');
+                Template::set_message(lang('compose_success'), 'success');
+                return $this->books_model->put_content($update_data);
+            }
+        }
+    }
 }

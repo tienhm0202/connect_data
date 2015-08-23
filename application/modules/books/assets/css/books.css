@@ -1,0 +1,21 @@
+.header {
+    padding: 3px;
+    color: #808080;
+    width: 100%;
+    border: solid 1px #ffffff;
+    background: gainsboro;
+}
+.body {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.container-fluid {
+    margin-left: 0px;
+    margin-right: 0px;
+}
+.span3 {
+    margin: 0px !important;
+}
+a:-webkit-any-link {
+    text-decoration: none;
+}

@@ -129,10 +129,10 @@ class Books_model extends BF_Model
 
         if ($cat_list->num_rows() < 1)
             return;
-        return $this->standardlize_array($cat_list->result(), 'category_id', 'category_name');
+        return $this->standardize_array($cat_list->result(), 'category_id', 'category_name');
     }
 
-    public function standardlize_array($array, $key, $value)
+    public function standardize_array($array, $key, $value)
     {
         if (isset($array) && is_array($array) && count($array) > 0) {
             if ($key == null || $value == null) {
@@ -150,6 +150,25 @@ class Books_model extends BF_Model
         }
     }
 
+    public function get_content_file($content_id)
+    {
+        $result = $this->db->select("*")
+            ->where("id", $content_id)
+            ->get("content");
+
+        if ($result->num_rows() < 1)
+            return false;
+
+        $result = $result->result_array()[0];
+
+        if ($result["file_type"] == "html")
+            $result["content"] = file_get_contents($result["filename"]);
+        else
+            $result["content"] = "";
+
+        return $result;
+    }
+
     public function insert_permission($user_id, $book_id, $permission)
     {
         $this->db->insert('book_user', array('user_id' => $user_id, 'book_id' => $book_id, 'permission' => $permission));
@@ -158,24 +177,72 @@ class Books_model extends BF_Model
     public function get_filename($id)
     {
         $result = $this->db->select('filename, file_type')
-            ->where('book_id', $id)
-            ->get($this->table_name);
+            ->where('id', $id)
+            ->get('content');
 
         if ($result->num_rows() < 1)
             return false;
-        else{
+        else {
             return $result->result();
         }
 
     }
 
+    public function add_content_to_book($book_id, $content_id){
+        $result = $this->db->select("content")
+            ->where('book_id', $book_id)
+            ->get($this->table_name);
+
+        $content_list = $result->row('content');
+        $data['content'] = $content_list.'|'.$content_id;
+
+        $this->db->update('books', $data, array('book_id' => $book_id));
+
+        return true;
+    }
+
+    public function put_content($data){
+        $data["created_on"] = date("Y-m-d H:i:s");
+        if ($this->db->insert('content', $data)){
+            return $this->db->insert_id();
+        }
+
+    }
+
+    public function get_content_order($id)
+    {
+        $result = $this->db->select("content")
+            ->where('book_id', $id)
+            ->get($this->table_name);
+
+        if ($result->num_rows() < 1)
+            return false;
+
+        return explode("|", $result->row('content'));
+
+    }
+
     public function get_content($id)
     {
-        $fileinfo = $this->get_filename($id);
-        if ($fileinfo[0]->file_type == "html")
-            return file_get_contents($fileinfo[0]->filename);
-        else
-            return $fileinfo[0];
+        $list_content = $this->get_content_order($id);
+        $content = $this->db->select("*")
+            ->where_in("id", $list_content)
+            ->get("content");
+
+        if ($content->num_rows() < 1)
+            return false;
+        $content = $content->result_array();
+
+        foreach ($list_content as $content_id){
+            foreach ($content as $item) {
+                if ($item["id"] == $content_id){
+                    $new_content[] = $item;
+                }
+            }
+        }
+
+        return $new_content;
+
     }
 
     public function get_author($id)
