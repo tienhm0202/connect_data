@@ -100,15 +100,32 @@ class Books_model extends BF_Model
             $this->db->where($condition);
         if (isset($like) && !empty($like))
             $this->db->like($like);
-        $result = $this->db->where($where_query)
-            ->limit($limit, $offset)
-            ->order_by('b.created_on', 'DESC')
-            ->get();
+        $this->db->where($where_query);
+        if ($offset && $limit)
+            $this->db->limit($limit, $offset);
+        $result = $this->db->order_by('b.created_on', 'DESC')->get();
         //echo $this->db->last_query(); die;
         if ($result->num_rows() < 1)
-            return;
+            return false;
         else
             return $result->result();
+    }
+
+    public function clone_content($dest_book, $source_book)
+    {
+        $source_content = $this->db->select("content")
+            ->where('book_id', $source_book)
+            ->get($this->table_name);
+
+        $dest_content = $this->db->select("content")
+            ->where('book_id', $dest_book)
+            ->get($this->table_name);
+
+        $content_new = $dest_content->row("content") . "|" . $source_content->row("content");
+
+        $this->db->update($this->table_name, array('content' => $content_new), array('book_id' => $dest_book));
+
+        return true;
     }
 
     public function count_all()
@@ -188,22 +205,24 @@ class Books_model extends BF_Model
 
     }
 
-    public function add_content_to_book($book_id, $content_id){
+    public function add_content_to_book($book_id, $content_id)
+    {
         $result = $this->db->select("content")
             ->where('book_id', $book_id)
             ->get($this->table_name);
 
         $content_list = $result->row('content');
-        $data['content'] = $content_list.'|'.$content_id;
+        $data['content'] = $content_list . '|' . $content_id;
 
         $this->db->update('books', $data, array('book_id' => $book_id));
 
         return true;
     }
 
-    public function put_content($data){
+    public function put_content($data)
+    {
         $data["created_on"] = date("Y-m-d H:i:s");
-        if ($this->db->insert('content', $data)){
+        if ($this->db->insert('content', $data)) {
             return $this->db->insert_id();
         }
 
@@ -233,9 +252,9 @@ class Books_model extends BF_Model
             return false;
         $content = $content->result_array();
 
-        foreach ($list_content as $content_id){
+        foreach ($list_content as $content_id) {
             foreach ($content as $item) {
-                if ($item["id"] == $content_id){
+                if ($item["id"] == $content_id) {
                     $new_content[] = $item;
                 }
             }
@@ -312,5 +331,21 @@ class Books_model extends BF_Model
         else {
             return $result->row('permission');
         }
+    }
+
+    public function remove_content($book_id, $content_id){
+        $new_content = str_replace($content_id, "", $this->get_book_content($book_id));
+        $new_content = str_replace('||', '|', $new_content);
+
+        $this->db->update($this->table_name, array('content' => $new_content), array('book_id' => $book_id));
+        return true;
+    }
+
+    public function get_book_content($book_id){
+        $result = $this->db->select("content")
+            ->where('book_id', $book_id)
+            ->get($this->table_name);
+
+        return $result->row('content');
     }
 }

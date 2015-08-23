@@ -13,7 +13,7 @@ if (is_image($content["file_type"])) {
 }
 ?>
 
-<div class="span8">
+<div class="span9">
     <h4>Nội dung</h4>
     <fieldset>
         <div style="display: <?php echo $display == "block" ? "none" : $display ?>">

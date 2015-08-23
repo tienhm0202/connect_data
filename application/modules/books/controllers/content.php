@@ -174,18 +174,50 @@ class content extends Admin_Controller
     {
         $id = $this->uri->segment(5);
 
+        $condition = $like = array();
+        $condition['book_id !='] = $id;
+
+        $st = false;
+
+        if ($this->input->post("st")) {
+            if ($this->input->post('category_id')) {
+                $condition['category_id'] = $this->input->post('category_id');
+            }
+            if ($this->input->post('title')) {
+                $like['title'] = $this->input->post('title');
+            }
+            $st = true;
+        }
+
+        $records = $this->books_model->search_books($this->current_user->id, 1, null, null, $condition, $like);
+
+        Template::load_view("st",
+            array(
+                "records" => $records,
+                'category' => $this->books_model->get_cat_list(),
+                'books' => $this->input->post()),
+            "", false, $search);
+
         if (empty($id)) {
             Template::set_message(lang('books_invalid_id'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
 
-        if ($this->input->post()) {
-            $content_id = $this->create_new_content();
-            $this->books_model->add_content_to_book($id, $content_id);
-            redirect(SITE_AREA . '/content/books/compose/' . $id . '/' . $content_id);
+        if ($this->input->post("save")) {
+            if($this->input->post("got_book")){
+                $this->books_model->clone_content($id, $this->input->post("got_book"));
+                redirect(SITE_AREA . '/content/books/compose/' . $id);
+            } else {
+                $content_id = $this->create_new_content();
+                $this->books_model->add_content_to_book($id, $content_id);
+                redirect(SITE_AREA . '/content/books/compose/' . $id . '/' . $content_id);
+            }
         }
 
+        Assets::add_js($this->load->view('content/meo_con_js', array("st" => $st), true), 'inline');
         Template::set('toolbar_title', "Chọn kiểu tài liệu");
+        Template::set('search', $search);
+        Template::set('st', $st);
         Template::render();
 
     }
@@ -406,9 +438,11 @@ class content extends Admin_Controller
 
     //--------------------------------------------------------------------
 
-    private function create_new_content(){
+    private function create_new_content()
+    {
+        $update_data["owner_id"] = $this->auth->user_id();
         if ($this->input->post()) {
-            if ($this->input->post('userfile')) {
+            if ($this->input->post('doc_type') == "file") {
                 $config['upload_path'] = 'assets/books/';
                 $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
                 $config['encrypt_name'] = true;
@@ -440,4 +474,18 @@ class content extends Admin_Controller
             }
         }
     }
+
+    public function remove_content(){
+        $book_id = $id = $this->uri->segment(5);
+        $content_id = $id = $this->uri->segment(6);
+
+        if (!$book_id or !$content_id)
+            Template::set_message("ID không hợp lệ", "error");
+
+        $this->books_model->remove_content($book_id, $content_id);
+        Template::set_message("Xóa nội dung thành công", "success");
+
+        redirect(SITE_AREA . '/content/books/compose/'.$book_id);
+    }
+
 }
