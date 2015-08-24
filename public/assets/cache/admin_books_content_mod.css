@@ -1,7 +1,7 @@
 .header {
     padding: 3px;
     color: #808080;
-    width: 100%;
+    width: 88%;
     border: solid 1px #ffffff;
     background: gainsboro;
 }
@@ -18,4 +18,8 @@
 }
 a:-webkit-any-link {
     text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    margin: 0px;
 }

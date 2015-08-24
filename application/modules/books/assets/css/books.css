@@ -19,3 +19,7 @@
 a:-webkit-any-link {
     text-decoration: none;
 }
+ul {
+    list-style-type: none;
+    margin: 0px;
+}

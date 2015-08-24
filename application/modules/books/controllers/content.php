@@ -236,7 +236,13 @@ class content extends Admin_Controller
         }
 
         if ($this->input->post()) {
-            if ($this->input->post('upload')) {
+            if ($this->input->post("save")) {
+                $content_id = $this->uri->segment(6);
+                $update_data["header"] = $this->input->post("header");
+                $update_data["content"] = htmlspecialchars($this->input->post("content"));
+
+                $this->books_model->update_content($content_id, $update_data);
+            } elseif ($this->input->post('upload')) {
                 $config['upload_path'] = 'assets/books/';
                 $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
                 $config['encrypt_name'] = true;
@@ -270,10 +276,14 @@ class content extends Admin_Controller
         $content_id = $this->uri->segment(6) ? $this->uri->segment(6) : $content[0]["id"];
         $file_content = $this->books_model->get_content_file($content_id);
 
+        $url = site_url(SITE_AREA . '/content/books/update_content_order/' . $id);
+
         Assets::add_js(Template::theme_url('js/tiny_mce/jquery.tinymce.js'));
         Assets::add_js(Template::theme_url('js/tiny_mce/tiny_mce.js'));
+        Assets::add_js($this->load->view('content/update_header_list_js', array("url" => $url), true), 'inline');
         Assets::add_module_js('books', 'pdf_reader.js');
         Assets::add_module_js('books', 'init_reader.js');
+        Assets::add_module_js('books', 'jquery.cookie.js');
         Assets::add_module_css('books', 'books.css');
         Template::set("book_id", $id);
         Template::set('book_content', $content);
@@ -486,6 +496,19 @@ class content extends Admin_Controller
         Template::set_message("Xóa nội dung thành công", "success");
 
         redirect(SITE_AREA . '/content/books/compose/'.$book_id);
+    }
+
+    public function update_content_order(){
+        $book_id = $id = $this->uri->segment(5);
+
+        if (!$book_id)
+            Template::set_message("ID không hợp lệ", "error");
+
+        if ($this->input->post('neworder')){
+            $this->books_model->update($book_id, array("content" => $this->input->post('neworder')));
+        }
+
+        echo json_encode($this->input->post('neworder'));
     }
 
 }

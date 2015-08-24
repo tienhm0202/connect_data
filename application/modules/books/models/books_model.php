@@ -348,4 +348,15 @@ class Books_model extends BF_Model
 
         return $result->row('content');
     }
+
+    public function update_content($content_id, $update_data){
+        $filename = $this->get_filename($content_id);
+        $realname = $filename[0]->filename;
+
+        file_put_contents($realname, $update_data["content"]);
+
+        unset($update_data["content"]);
+
+        return $this->db->update("content", $update_data, array("id" => $content_id));
+    }
 }
