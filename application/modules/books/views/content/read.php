@@ -1,16 +1,36 @@
-<h3><?php echo lang('books_read') ?></h3>
-<div class="well">
-    <h4><?php echo $books->title ?></h4>
-    <p><?php echo $author; ?></p>
-    <p><?php echo $books->created_on ?></p>
-    <p><?php echo anchor(SITE_AREA . '/content/collections/add_collection?book_id=' . $id. '&url='.urlencode(site_url(SITE_AREA. '/content/books/read/'. $id)), '<span class="icon-plus"></span>' . 'Thêm vào Tủ sách'); ?></p>
-</div>
-<div class="admin-box">
-    <div style="padding-left: 5px; padding-right: 5px">
-        <?php echo($doc); ?>
-    </div>
-    <div class="form-actions">
-        <?php echo anchor(SITE_AREA . '/content/books/download/'.$id, '<i class="icon-download-alt icon-white"></i>'.lang('books_download'), 'class="btn btn-info"'); ?>
-        <?php echo anchor($url_back, lang('books_back'), 'class="btn btn-warning"'); ?>
-    </div>
+<?php $id = isset($book_id) ? $book_id : ''; ?>
+<h3><?php echo lang('books_compose') ?></h3>
+<div class="row-fluid">
+    <?php echo form_open($this->uri->uri_string(), 'class="form-horizontal" enctype= multipart/form-data'); ?>
+    <?php if (isset($book_content) && is_array($book_content) && count($book_content)): ?>
+        <div class="span3">
+            <h4>Tiêu đề</h4>
+            <ul class="sortable">
+                <?php foreach ($book_content as $key => $content): ?>
+                    <?php if ($content["id"] == $selected_content): ?>
+                        <li id="<?php echo $content["id"] ?>">
+                            <input name="header"
+                                   type="text" id="<?php echo $content["id"] ?>"
+                                   value="<?php echo $content["header"] ?>"
+                                   class="header active"/>
+                        </li>
+                    <?php else: ?>
+                        <li id="<?php echo $content["id"] ?>">
+                            <a class="no-underline"
+                               href="<?php echo site_url(SITE_AREA . '/content/books/read/' . $id . '/' . $content["id"]) ?>">
+                                <div class="header">
+                                    <?php echo $content["header"] ?>
+                                </div>
+                            </a>
+                        </li>
+                    <?php endif; ?>
+                <?php endforeach; ?>
+            </ul>
+        </div>
+        <?php $this->load->view('books/_read_part', array("content" => $file_content)); ?>
+    <?php else: ?>
+        <?php redirect(site_url(SITE_AREA . '/content/books/choose/' . $id)) ?>
+    <?php endif; ?>
+    <?php echo form_close(); ?>
+    <div class="result"></div>
 </div>

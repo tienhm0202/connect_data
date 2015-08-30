@@ -134,8 +134,8 @@
         expressInstaller: null,	// src for express installer
 
         // default flash video and mp3 player (@see: http://jeroenwijering.com/?item=Flash_Media_Player)
-        flvPlayer:	 'mediaplayer.swf',
-        mp3Player:	 'mediaplayer.swf',
+        flvPlayer:	 'http://localhost/connect_data/public/assets/mediaplayer.swf',
+        mp3Player:	 'http://localhost/connect_data/public/assets/mediaplayer.swf',
 
         // @see http://msdn2.microsoft.com/en-us/library/bb412401.aspx
         silverlight: {

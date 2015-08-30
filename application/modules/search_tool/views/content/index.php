@@ -54,7 +54,7 @@ $has_records = (isset($records) && is_array($records) && count($records)) ? true
                     <td><?php e($record->tag) ?></td>
                     <td><?php e($record->created_on) ?></td>
                     <td><?php echo anchor(SITE_AREA . '/content/books/download/' . $record->book_id, '<span class="icon-download-alt"></span>' . lang('books_download')); ?></td>
-                    <td><?php echo anchor(SITE_AREA . '/content/collections/add_collection?book_id=' . $record->book_id. '&url='.urlencode(site_url(SITE_AREA. '/content/search_tool/index')), '<span class="icon-plus"></span>' . lang('books_add_to_collection')); ?></td>
+<!--                    <td>--><?php //echo anchor(SITE_AREA . '/content/collections/add_collection?book_id=' . $record->book_id. '&url='.urlencode(site_url(SITE_AREA. '/content/search_tool/index')), '<span class="icon-plus"></span>' . lang('books_add_to_collection')); ?><!--</td>-->
                 </tr>
             <?php
             endforeach;

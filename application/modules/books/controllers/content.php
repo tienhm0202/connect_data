@@ -204,7 +204,7 @@ class content extends Admin_Controller
         }
 
         if ($this->input->post("save")) {
-            if($this->input->post("got_book")){
+            if ($this->input->post("got_book")) {
                 $this->books_model->clone_content($id, $this->input->post("got_book"));
                 redirect(SITE_AREA . '/content/books/compose/' . $id);
             } else {
@@ -300,46 +300,42 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
-        $filename = $this->books_model->get_filename($id);
-        if (isset($id) && $filename) {
-
-            error_reporting(E_ALL);
-            define('CLI', (PHP_SAPI == 'cli') ? true : false);
-            define('EOL', CLI ? PHP_EOL : '<br />');
-
-            Autoloader::register();
-            Settings::loadConfig();
-
-            $writers = array('Word2007' => 'docx', 'ODText' => 'odt', 'RTF' => 'rtf');
-
-            if (CLI) {
-                return;
-            }
-            $phpWord = \PhpOffice\PhpWord\IOFactory::load($filename, 'HTML');
-            if ($this->write($phpWord, $id, $writers)) {
-                Template::set('writters', $writers);
-                Template::set('id', $id);
-            } else {
-                Template::set_message(lang('books_download_failure'), 'error');
-            }
-            $books = $this->books_model->find($id);
-            $book_info['Title'] = $books->title;
-            $book_info['Author'] = $this->books_model->get_author($id);
-            $book_info['Category Id'] = $this->books_model->get_cat($books->category_id);
-            $book_info['description'] = $books->description;
-            $book_info['Tag'] = $books->tag;
-            Template::set('books', $book_info);
-            Template::set('toolbar_title', lang('books_manage'));
-            Template::render();
-        } else {
-            Template::set_message(lang('books_invalid_id'), 'error');
-            redirect(SITE_AREA . '/content/books');
-        }
+        $filename = $this->books_model->get_list_of_content_file($id);
+        $this->zip_file_and_download($filename);
     }
 
+    private function zip_file_and_download($file_names)
+    {
+        $archive_file_name = uniqid()."_connect_data.zip";
+        $zip = new ZipArchive();
+        //create the file and throw the error if unsuccessful
+        if ($zip->open($archive_file_name, ZIPARCHIVE::CREATE) !== TRUE) {
+            exit("cannot open <$archive_file_name>\n");
+        }
+        //add each files of $file_name array to archive
+        foreach ($file_names as $files) {
+            $zip->addFile($files);
+            //echo $file_path.$files,$files."
+
+        }
+        $zip->close();
+        //then send the headers to force download the zip file
+        header("Pragma: public");
+        header("Expires: 0");
+        header("Cache-Control: must-revalidate, post-check=0, pre-check=0");
+        header("Cache-Control: public");
+        header("Content-Description: File Transfer");
+        header("Content-type: application/octet-stream");
+        header("Content-Disposition: attachment; filename=$archive_file_name");
+        header("Content-Transfer-Encoding: binary");
+        ob_end_flush();
+        @readfile($archive_file_name);
+        exit;
+    }
 
     public function read()
     {
+        $this->load->helper('book');
         $id = $this->uri->segment(5);
         if (empty($id)) {
             Template::set_message(lang('books_invalid_id'), 'error');
@@ -349,14 +345,59 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
-        $this->load->library('user_agent');
-        $author = $this->books_model->get_author($id);
-        Template::set('doc', $this->books_model->get_content($id));
-        Template::set('books', $this->books_model->find($id));
-        Template::set('author', $author);
-        Template::set('url_back', $this->agent->referrer() ? $this->agent->referrer() : SITE_AREA . '/content/books/');
-        Template::set('id', $id);
+
+        if ($this->input->post()) {
+            if ($this->input->post("save")) {
+                $content_id = $this->uri->segment(6);
+                $update_data["header"] = $this->input->post("header");
+                $update_data["content"] = htmlspecialchars($this->input->post("content"));
+
+                $this->books_model->update_content($content_id, $update_data);
+            } elseif ($this->input->post('upload')) {
+                $config['upload_path'] = 'assets/books/';
+                $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
+                $config['encrypt_name'] = true;
+
+                $this->load->library('upload', $config);
+
+                if (!$this->upload->do_upload()) {
+                    Template::set_message($this->upload->display_errors(), 'error');
+                } else {
+                    $data = $this->upload->data();
+                    $update_data["filename"] = 'assets/books/' . $data["file_name"];
+                    $update_data["file_type"] = str_replace(".", "", $data["file_ext"]);
+                    $this->books_model->update($id, $update_data);
+                    print $this->db->last_query();
+                    Template::set_message("Tải tệp thành công.", "success");
+                }
+
+            } else {
+                $content = $this->input->post('content', true);
+                $filename = $this->books_model->get_filename($id);
+                if ($filename)
+                    file_put_contents($filename, $content);
+                Template::set_message(lang('compose_success'), 'success');
+            }
+        }
+
+        if (!isset($content)) {
+            $content = $this->books_model->get_content($id);
+        }
+
+        $content_id = $this->uri->segment(6) ? $this->uri->segment(6) : $content[0]["id"];
+        $file_content = $this->books_model->get_content_file($content_id);
+
+        Assets::add_js(Template::theme_url('js/tiny_mce/jquery.tinymce.js'));
+        Assets::add_js(Template::theme_url('js/tiny_mce/tiny_mce.js'));
+        Assets::add_module_js('books', 'pdf_reader.js');
+        Assets::add_module_js('books', 'init_reader.js');
+        Assets::add_module_js('books', 'jquery.cookie.js');
+        Assets::add_module_css('books', 'books.css');
+        Template::set("book_id", $id);
+        Template::set('book_content', $content);
+        Template::set('selected_content', $content_id);
         Template::set('toolbar_title', lang('books_manage'));
+        Template::set('file_content', $file_content);
         Template::render();
     }
     //--------------------------------------------------------------------
@@ -454,7 +495,7 @@ class content extends Admin_Controller
         if ($this->input->post()) {
             if ($this->input->post('doc_type') == "file") {
                 $config['upload_path'] = 'assets/books/';
-                $config['allowed_types'] = 'gif|jpg|png|pdf|doc';
+                $config['allowed_types'] = 'gif|jpg|jpeg|png|pdf|aif|aiff|aac|au|bmp|gsm|mov|mid|midi|mpg|mpeg|mp4|m4a|psd|qt|qtif|qif|qti|snd|tif|tiff|wav|3g2|3pg|flv|mp3|swf|asx|asf|avi|ra|ram|rm|rpm|rv|smi|smil|xaml|doc|docx|ppt|pptx|xls|xlsx';
                 $config['encrypt_name'] = true;
 
                 $this->load->library('upload', $config);
@@ -485,7 +526,8 @@ class content extends Admin_Controller
         }
     }
 
-    public function remove_content(){
+    public function remove_content()
+    {
         $book_id = $id = $this->uri->segment(5);
         $content_id = $id = $this->uri->segment(6);
 
@@ -495,16 +537,17 @@ class content extends Admin_Controller
         $this->books_model->remove_content($book_id, $content_id);
         Template::set_message("Xóa nội dung thành công", "success");
 
-        redirect(SITE_AREA . '/content/books/compose/'.$book_id);
+        redirect(SITE_AREA . '/content/books/compose/' . $book_id);
     }
 
-    public function update_content_order(){
+    public function update_content_order()
+    {
         $book_id = $id = $this->uri->segment(5);
 
         if (!$book_id)
             Template::set_message("ID không hợp lệ", "error");
 
-        if ($this->input->post('neworder')){
+        if ($this->input->post('neworder')) {
             $this->books_model->update($book_id, array("content" => $this->input->post('neworder')));
         }
 
