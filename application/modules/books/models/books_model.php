@@ -205,16 +205,6 @@ class Books_model extends BF_Model
 
     }
 
-    public function get_list_of_content_file($book_id){
-        $content = $this->get_content($book_id);
-        $filename_list = array();
-
-        foreach ($content as $file)
-            $filename_list[] = $file["filename"];
-
-        return $filename_list;
-    }
-
     public function add_content_to_book($book_id, $content_id)
     {
         $result = $this->db->select("content")
@@ -266,6 +256,7 @@ class Books_model extends BF_Model
             foreach ($content as $item) {
                 if ($item["id"] == $content_id) {
                     $new_content[] = $item;
+                    break;
                 }
             }
         }

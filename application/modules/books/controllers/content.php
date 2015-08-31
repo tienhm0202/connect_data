@@ -300,7 +300,7 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
-        $filename = $this->books_model->get_list_of_content_file($id);
+        $filename = $this->books_model->get_content($id);
         $this->zip_file_and_download($filename);
     }
 
@@ -313,8 +313,8 @@ class content extends Admin_Controller
             exit("cannot open <$archive_file_name>\n");
         }
         //add each files of $file_name array to archive
-        foreach ($file_names as $files) {
-            $zip->addFile($files);
+        foreach ($file_names as $key => $files) {
+            $zip->addFile($files["filename"], "{$key}. {$files["header"]}.{$files["file_type"]}");
             //echo $file_path.$files,$files."
 
         }
