@@ -30,11 +30,6 @@ function is_audio($type){
                 <?php endif; ?>
             <?php elseif (is_image($content["file_type"])): ?>
                 <img src='<?php echo base_url() . $content["filename"] ?>'>
-            <?php elseif ($content["file_type"] == "mp3"): ?>
-                <object type="application/x-shockwave-flash" id="dewplayer" data="<?php echo base_url(). "assets/dewplayer/dewplayer-bubble.swf" ?>" width="250" height="65">
-                    <param name="wmode" value="transparent">
-                    <param name="flashvars" value="mp3=<?php echo urlencode(base_url().$content["filename"]) ?>">
-                </object>
             <?php elseif (is_microsoft($content["file_type"])): ?>
                 <iframe src="http://docs.google.com/gview?url=<?php echo base_url(). $content["filename"] ?>&embedded=true" style="width:100%; height:600px;" frameborder="0"></iframe>
             <?php elseif (is_video($content["file_type"])): ?>
