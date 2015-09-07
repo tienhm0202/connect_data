@@ -37,3 +37,4 @@ $lang['setting_groups_name_exist'] = 'Tên cấu hình chung đã tồn tại';
 $lang['setting_groups_label_exist'] = 'Nhãn cấu hình chung đã tồn tại';
 $lang['key'] = 'Khóa: ';
 $lang['val'] = 'Giá trị: ';
+$lang['login_destination'] = 'Trang sau khi login';

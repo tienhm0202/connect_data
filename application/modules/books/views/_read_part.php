@@ -41,8 +41,6 @@ function is_audio($type){
         </div>
 
         <div class="form-actions">
-            <input type="submit" name="save" class="btn btn-primary" value="<?php echo "Lưu lại"; ?>"/>
-            <?php echo lang('bf_or'); ?>
             <?php echo anchor(SITE_AREA . '/content/books', lang('books_cancel'), 'class="btn btn-warning"'); ?>
         </div>
     </fieldset>

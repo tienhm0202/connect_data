@@ -51,21 +51,21 @@
 		</div>
 	<?php echo form_close(); ?>
 
-	<?php // show for Email Activation (1) only
-		if ($this->settings_lib->item('auth.user_activation_method') == 1) : ?>
+<!--	--><?php //// show for Email Activation (1) only
+//		if ($this->settings_lib->item('auth.user_activation_method') == 1) : ?>
 	<!-- Activation Block -->
-			<p style="text-align: left" class="well">
-				<?php echo lang('bf_login_activate_title'); ?><br />
-				<?php
-				$activate_str = str_replace('[ACCOUNT_ACTIVATE_URL]',anchor('/activate', lang('bf_activate')),lang('bf_login_activate_email'));
-				$activate_str = str_replace('[ACTIVATE_RESEND_URL]',anchor('/resend_activation', lang('bf_activate_resend')),$activate_str);
-				echo $activate_str; ?>
-			</p>
-	<?php endif; ?>
+<!--			<p style="text-align: left" class="well">-->
+<!--				--><?php //echo lang('bf_login_activate_title'); ?><!--<br />-->
+<!--				--><?php
+//				$activate_str = str_replace('[ACCOUNT_ACTIVATE_URL]',anchor('/activate', lang('bf_activate')),lang('bf_login_activate_email'));
+//				$activate_str = str_replace('[ACTIVATE_RESEND_URL]',anchor('/resend_activation', lang('bf_activate_resend')),$activate_str);
+//				echo $activate_str; ?>
+<!--			</p>-->
+<!--	--><?php //endif; ?>
 
 	<p style="text-align: center">
 		<?php if ( $site_open ) : ?>
-			<?php //echo anchor(REGISTER_URL, lang('us_sign_up')); ?>
+			<?php echo anchor(REGISTER_URL, lang('us_sign_up')); ?>
 		<?php endif; ?>
 
 		<br/><?php echo anchor('/forgot_password', lang('us_forgot_your_password')); ?>

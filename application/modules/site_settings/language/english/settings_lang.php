@@ -40,4 +40,5 @@ $lang['setting_groups_name_exist'] = 'Setting group name existed';
 $lang['setting_groups_label_exist'] = 'Setting group label existed';
 $lang['key'] = 'Key: ';
 $lang['val'] = 'Value: ';
+$lang['login_destination'] = 'Login Destination';
 

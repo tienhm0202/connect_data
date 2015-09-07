@@ -4,11 +4,20 @@
 $config['setting']['general_settings.errors_report_to'] = array(
     'setting_group' => 'general_settings',
     'label' => 'lang:errors_report_to',
-    'default_value' => 'datls@thinknet.vn|quydm@thinknet.vn',
+    'default_value' => 'tienhm.0202@gmail.com',
     'data_type' => 'text',
     'values' => null,
     'required' => false,
     'sort_order' => 1,
+);
+$config['setting']['general_settings.redirect_destination'] = array(
+    'setting_group' => 'general_settings',
+    'label' => 'lang:login_destination',
+    'default_value' => 'search_tool',
+    'data_type' => 'text',
+    'values' => null,
+    'required' => false,
+    'sort_order' => 2,
 );
 /*
 //end:general_settings.errors_report_to:

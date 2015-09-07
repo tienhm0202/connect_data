@@ -31,6 +31,7 @@ $has_records = (isset($records) && is_array($records) && count($records)) ? true
             <th><?php echo lang('Published'); ?></th>
             <th><?php echo lang('Tag'); ?></th>
             <th><?php echo lang('books_column_created'); ?></th>
+            <th><?php echo "Điểm đánh giá"; ?></th>
             <th colspan="<?php echo $num_columns?>"></th>
         </tr>
         </thead>
@@ -53,6 +54,7 @@ $has_records = (isset($records) && is_array($records) && count($records)) ? true
                     <td><?php e($record->published) ?></td>
                     <td><?php e($record->tag) ?></td>
                     <td><?php e($record->created_on) ?></td>
+                    <td><div class='badge badge-warning' style="line-height: 14px; font-size: 14px"><?php e($record->rate) ?><i class='icon icon-white icon-star' style="margin-left: 3px"></i></div></td>
                     <td><?php echo anchor(SITE_AREA . '/content/books/download/' . $record->book_id, '<span class="icon-download-alt"></span>' . lang('books_download')); ?></td>
 <!--                    <td>--><?php //echo anchor(SITE_AREA . '/content/collections/add_collection?book_id=' . $record->book_id. '&url='.urlencode(site_url(SITE_AREA. '/content/search_tool/index')), '<span class="icon-plus"></span>' . lang('books_add_to_collection')); ?><!--</td>-->
                 </tr>

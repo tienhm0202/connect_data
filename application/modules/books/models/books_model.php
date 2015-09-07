@@ -103,12 +103,17 @@ class Books_model extends BF_Model
         $this->db->where($where_query);
         if ($offset && $limit)
             $this->db->limit($limit, $offset);
-        $result = $this->db->order_by('b.created_on', 'DESC')->get();
+        $result = $this->db->order_by('b.rate', 'DESC')->get();
         //echo $this->db->last_query(); die;
         if ($result->num_rows() < 1)
             return false;
         else
             return $result->result();
+    }
+
+    public function increase_rate($book_id, $points){
+        $query = "UPDATE bf_books SET rate = rate + {$points} WHERE book_id = {$book_id}";
+        return $this->db->query($query);
     }
 
     public function clone_content($dest_book, $source_book)
@@ -122,8 +127,12 @@ class Books_model extends BF_Model
             ->get($this->table_name);
 
         $content_new = $dest_content->row("content") . "|" . $source_content->row("content");
+        $content_new_array = explode("|", $content_new);
+        $content_standardized = implode("|", array_unique($content_new_array));
 
-        $this->db->update($this->table_name, array('content' => $content_new), array('book_id' => $dest_book));
+        $this->increase_rate($source_book, 5);
+
+        $this->db->update($this->table_name, array('content' => $content_standardized), array('book_id' => $dest_book));
 
         return true;
     }
@@ -335,8 +344,11 @@ class Books_model extends BF_Model
     }
 
     public function remove_content($book_id, $content_id){
-        $new_content = str_replace($content_id, "", $this->get_book_content($book_id));
-        $new_content = str_replace('||', '|', $new_content);
+        $old_content = explode("|",$this->get_book_content($book_id));
+        if(($key = array_search($content_id, $old_content)) !== false) {
+            unset($old_content[$key]);
+        }
+        $new_content = implode("|", $old_content);
 
         $this->db->update($this->table_name, array('content' => $new_content), array('book_id' => $book_id));
         return true;

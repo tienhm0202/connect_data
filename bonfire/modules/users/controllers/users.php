@@ -87,9 +87,9 @@ class Users extends Front_Controller
 						cases where we are presenting different information to different
 						roles that might cause the base destination to be not available.
 					*/
-					if ($this->settings_lib->item('auth.do_login_redirect') && !empty ($this->auth->login_destination))
+					if ($this->settings_lib->item('general_settings.redirect_destination'))
 					{
-						Template::redirect($this->auth->login_destination);
+						Template::redirect("/admin/content/". $this->settings_lib->item('general_settings.redirect_destination'));
 					}
 					else
 					{

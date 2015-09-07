@@ -300,6 +300,10 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
+
+        # Increase rate by 1
+        $this->vote($id, 3);
+
         $filename = $this->books_model->get_content($id);
         $this->zip_file_and_download($filename);
     }
@@ -345,6 +349,9 @@ class content extends Admin_Controller
             Template::set_message(lang('restricted'), 'error');
             redirect(SITE_AREA . '/content/books');
         }
+
+        # Increase rate by 1
+        $this->vote($id, 1);
 
         if ($this->input->post()) {
             if ($this->input->post("save")) {
@@ -528,8 +535,8 @@ class content extends Admin_Controller
 
     public function remove_content()
     {
-        $book_id = $id = $this->uri->segment(5);
-        $content_id = $id = $this->uri->segment(6);
+        $book_id = $this->uri->segment(5);
+        $content_id = $this->uri->segment(6);
 
         if (!$book_id or !$content_id)
             Template::set_message("ID không hợp lệ", "error");
@@ -542,7 +549,7 @@ class content extends Admin_Controller
 
     public function update_content_order()
     {
-        $book_id = $id = $this->uri->segment(5);
+        $book_id = $this->uri->segment(5);
 
         if (!$book_id)
             Template::set_message("ID không hợp lệ", "error");
@@ -552,6 +559,21 @@ class content extends Admin_Controller
         }
 
         echo json_encode($this->input->post('neworder'));
+    }
+
+    private function vote($book_id, $points){
+        $this->books_model->increase_rate($book_id, $points);
+
+        return true;
+    }
+
+    public function vote_up(){
+        $book_id = $this->uri->segment(5);
+        $points = $this->uri->segment(6);
+
+        $this->vote($book_id, $points);
+
+        Template::set_message("Vote thành công");
     }
 
 }
